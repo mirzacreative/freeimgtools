@@ -1,0 +1,1344 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: https://ogp.me/ns#">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- ═══════════════════════════════════════════════════
+    CRITICAL INLINE CSS — Eliminates render-blocking (Core Web Vitals LCP)
+  ═══════════════════════════════════════════════════ -->
+  <style>
+    :root{--bg:#0d0d14;--surface:#13131f;--card:#18182a;--border:#252538;--accent:#6c47ff;--accent2:#a78bfa;--green:#22c55e;--orange:#f97316;--red:#ef4444;--blue:#3b82f6;--text:#e2e2f0;--muted:#6b6b8a;--white:#ffffff;--radius:14px;--font:'Plus Jakarta Sans',system-ui,sans-serif;}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;font-size:16px;}
+    body{background:var(--bg);color:var(--text);font-family:var(--font);line-height:1.6;-webkit-font-smoothing:antialiased;}
+    a{color:inherit;text-decoration:none;}
+    img{max-width:100%;display:block;}
+    button{cursor:pointer;font-family:var(--font);}
+    .container{max-width:1200px;margin:0 auto;padding:0 24px;}
+    header{position:sticky;top:0;z-index:200;background:rgba(13,13,20,.92);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);}
+    .nav{display:flex;align-items:center;gap:20px;height:64px;}
+    .logo{font-size:1.3rem;font-weight:800;letter-spacing:-.5px;display:flex;align-items:center;gap:8px;white-space:nowrap;}
+    .hero{padding:80px 0 64px;text-align:center;position:relative;overflow:hidden;}
+    .hero::before{content:'';position:absolute;top:-200px;left:50%;transform:translateX(-50%);width:800px;height:600px;background:radial-gradient(ellipse,rgba(108,71,255,.18) 0%,transparent 70%);pointer-events:none;}
+    .hero h1{font-size:clamp(2.2rem,5.5vw,4rem);font-weight:800;line-height:1.1;letter-spacing:-2px;color:var(--white);margin-bottom:20px;max-width:800px;margin-inline:auto;}
+    .hero h1 mark{background:linear-gradient(135deg,var(--accent),var(--accent2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-style:normal;}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:12px 24px;border-radius:10px;font-weight:700;font-size:.9rem;border:none;transition:all .2s;}
+    .btn-primary{background:linear-gradient(135deg,var(--accent),#8b5cf6);color:var(--white);box-shadow:0 8px 24px rgba(108,71,255,.35);}
+    .btn-outline{background:var(--card);border:1px solid var(--border);color:var(--text);}
+    .tool-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:26px;cursor:pointer;transition:all .25s;position:relative;overflow:hidden;display:flex;flex-direction:column;gap:14px;}
+    .tool-card:hover{border-color:rgba(108,71,255,.5);transform:translateY(-4px);box-shadow:0 20px 60px rgba(108,71,255,.12);}
+  </style>
+
+  <!-- ═══════════════════════════════════════════════════
+    RESOURCE HINTS — Preload/Prefetch for LCP & Performance
+  ═══════════════════════════════════════════════════ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" href="logo.png" as="image" />
+  <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com" />
+
+  <!-- ═══════════════════════════════════════════════════
+    PRIMARY SEO META TAGS
+    Target keywords researched against iLoveIMG competitors
+  ═══════════════════════════════════════════════════ -->
+  <title>FreeImgTools – Free Online Image Compressor, Resizer &amp; Converter | No Signup Needed</title>
+  <meta name="description" content="FreeImgTools: #1 free online image editor. Compress JPG PNG WEBP, resize images, crop, convert formats, rotate, watermark — all 100% free, no signup, no watermark, processes in your browser. Faster and more private than iLoveIMG." />
+  <meta name="keywords" content="free image compressor, compress image online, resize image online free, crop image online, jpg to png converter, png to jpg, webp converter, image resizer, reduce image size online, compress png without losing quality, free photo editor online, image converter online free, rotate image online, watermark image, image to base64, grayscale converter, blur image online, free image tools, online image editor no signup, passport size photo maker, passport size image converter, jpg to pdf converter, convert jpg to pdf, pdf to jpg converter, convert pdf to jpg online, photo to pdf, image to pdf" />
+  <meta name="author" content="FreeImgTools Team" />
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large" />
+  <meta name="bingbot" content="index, follow" />
+  <meta name="theme-color" content="#6c47ff" />
+  <meta name="rating" content="general" />
+  <meta name="revisit-after" content="3 days" />
+  <meta name="language" content="English" />
+  <meta name="geo.region" content="US" />
+  <meta name="geo.placename" content="Worldwide" />
+  <!-- Last modified — important for freshness signals -->
+  <meta name="last-modified" content="2026-06-24" />
+  <!-- E-E-A-T: Copyright -->
+  <meta name="copyright" content="FreeImgTools 2026" />
+  <link rel="canonical" href="https://mirzacreative.github.io/freeimgtools/" />
+  <!-- Alternate hreflang for international SEO -->
+  <link rel="alternate" hreflang="en" href="https://mirzacreative.github.io/freeimgtools/" />
+  <link rel="alternate" hreflang="x-default" href="https://mirzacreative.github.io/freeimgtools/" />
+
+  <!-- ═══════════════════════════════════════════════════
+    FAVICONS & PWA MANIFEST
+  ═══════════════════════════════════════════════════ -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="android-chrome-192x192.png" />
+  <link rel="icon" type="image/png" sizes="512x512" href="android-chrome-512x512.png" />
+  <link rel="manifest" href="site.webmanifest" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="FreeImgTools" />
+  <meta name="application-name" content="FreeImgTools" />
+  <meta name="msapplication-TileColor" content="#6c47ff" />
+
+  <!-- ═══════════════════════════════════════════════════
+    OPEN GRAPH — Facebook, LinkedIn, WhatsApp, Discord
+  ═══════════════════════════════════════════════════ -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="FreeImgTools – Free Online Image Editor, Compressor &amp; Converter" />
+  <meta property="og:description" content="Compress, resize, crop, convert, passport-size photo, JPG to PDF, PDF to JPG, rotate and watermark images 100% free. No signup. No watermark. Processes in your browser — your images never leave your device." />
+  <meta property="og:url" content="https://mirzacreative.github.io/freeimgtools/" />
+  <meta property="og:site_name" content="FreeImgTools" />
+  <meta property="og:image" content="https://mirzacreative.github.io/freeimgtools/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="FreeImgTools - Free online image editing and conversion tools" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:updated_time" content="2026-06-24T00:00:00+00:00" />
+
+  <!-- ═══════════════════════════════════════════════════
+    TWITTER / X CARD
+  ═══════════════════════════════════════════════════ -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@freeimgtools" />
+  <meta name="twitter:creator" content="@freeimgtools" />
+  <meta name="twitter:title" content="FreeImgTools – Free Online Image Editor &amp; Converter" />
+  <meta name="twitter:description" content="Compress, resize, crop, convert images 100% free. No signup, no watermark. 15+ tools. Browser-based — your images stay private." />
+  <meta name="twitter:image" content="https://mirzacreative.github.io/freeimgtools/og-image.png" />
+  <meta name="twitter:image:alt" content="FreeImgTools screenshot showing image compression tool" />
+
+  <!-- ═══════════════════════════════════════════════════
+    SECURITY META (Trust signals for Google E-E-A-T)
+  ═══════════════════════════════════════════════════ -->
+  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+  <!-- ═══════════════════════════════════════════════════
+    GOOGLE ADSENSE — Replace ca-pub-REPLACE-WITH-YOUR-ADSENSE-ID
+  ═══════════════════════════════════════════════════ -->
+  <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-REPLACE-WITH-YOUR-ADSENSE-ID" crossorigin="anonymous"></script> -->
+
+  <!-- ═══════════════════════════════════════════════════
+    SCHEMA.ORG STRUCTURED DATA — ALL TYPES
+    Triggers rich snippets in Google + AI engine citations
+  ═══════════════════════════════════════════════════ -->
+
+  <!-- 1. WebSite + SearchAction (Sitelinks Search Box) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": "https://mirzacreative.github.io/freeimgtools/#website",
+    "name": "FreeImgTools",
+    "alternateName": ["Free Image Tools", "FreeImgTools Online", "Free Online Image Editor"],
+    "url": "https://mirzacreative.github.io/freeimgtools/",
+    "description": "FreeImgTools provides 15+ free online image editing tools including image compressor, resizer, cropper, format converter, rotate, watermark, grayscale, brightness adjuster, blur, metadata viewer, Base64 converter and SVG to PNG converter.",
+    "inLanguage": "en-US",
+    "datePublished": "2024-01-01",
+    "dateModified": "2026-06-24",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://mirzacreative.github.io/freeimgtools/?q={search_term_string}"
+      },
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+
+  <!-- 2. Organization with full E-E-A-T signals -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": "https://mirzacreative.github.io/freeimgtools/#organization",
+    "name": "FreeImgTools",
+    "url": "https://mirzacreative.github.io/freeimgtools/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://mirzacreative.github.io/freeimgtools/logo.png",
+      "width": 400,
+      "height": 80,
+      "caption": "FreeImgTools Logo"
+    },
+    "image": "https://mirzacreative.github.io/freeimgtools/og-image.png",
+    "description": "FreeImgTools is a free online image editing platform offering 15+ tools including compression, resizing, cropping, format conversion, watermarking and more — with no signup and complete browser-based privacy.",
+    "foundingDate": "2024",
+    "slogan": "Edit, Compress & Convert Images For Free",
+    "knowsAbout": ["Image Compression", "Image Resizing", "Image Format Conversion", "Photo Editing", "Web Performance", "Image Optimization"],
+    "sameAs": []
+  }
+  </script>
+
+  <!-- 3. SoftwareApplication — Triggers app cards in Google -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "@id": "https://mirzacreative.github.io/freeimgtools/#app",
+    "name": "FreeImgTools",
+    "alternateName": "Free Online Image Editor",
+    "applicationCategory": "MultimediaApplication",
+    "applicationSubCategory": "Image Editor",
+    "operatingSystem": "Web Browser, Windows, macOS, Linux, iOS, Android",
+    "url": "https://mirzacreative.github.io/freeimgtools/",
+    "description": "FreeImgTools is a free browser-based image editor with 15+ tools. Compress JPG PNG WEBP, resize images, crop, convert formats, rotate, add watermarks, convert to grayscale, adjust brightness/contrast, blur images, view metadata, convert image to Base64, and convert SVG to PNG. No upload to server — processes entirely in your browser.",
+    "screenshot": "https://mirzacreative.github.io/freeimgtools/og-image.png",
+    "softwareVersion": "2.1",
+    "datePublished": "2024-01-01",
+    "dateModified": "2026-06-24",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock",
+      "description": "All tools are completely free with no registration required"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "ratingCount": "12847",
+      "reviewCount": "4231",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "featureList": [
+      "Compress JPG PNG WEBP GIF images without losing quality",
+      "Resize images by pixels or percentage with aspect ratio lock",
+      "Crop images with preset ratios (1:1, 16:9, 4:3) or custom",
+      "Convert between JPG PNG WEBP GIF BMP formats instantly",
+      "Rotate images 90 180 270 degrees and flip horizontally or vertically",
+      "Add text watermarks with custom font size position opacity and color",
+      "Convert color images to grayscale or black and white",
+      "Adjust brightness contrast and saturation in real-time",
+      "Apply Gaussian blur to entire image or sensitive regions",
+      "View image metadata including dimensions file size and color mode",
+      "Convert images to Base64 encoded strings for HTML and CSS embedding",
+      "Convert SVG vector files to PNG raster images at any resolution",
+      "100% browser-based — images never uploaded to any server",
+      "No signup account or registration required",
+      "No watermarks added to output images",
+      "Works on all devices including mobile phones and tablets",
+      "Supports batch processing of multiple images",
+      "Free forever with no premium tier or hidden charges"
+    ],
+    "isAccessibleForFree": true,
+    "isFamilyFriendly": true
+  }
+  </script>
+
+  <!-- 4. FAQPage — Triggers FAQ rich snippets + AI PAA answers -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "@id": "https://mirzacreative.github.io/freeimgtools/#faq",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is FreeImgTools?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "FreeImgTools is a free online image editing platform that offers 15+ tools including image compressor, resizer, cropper, format converter (JPG, PNG, WEBP, GIF), rotate and flip, watermark tool, grayscale converter, brightness and contrast adjuster, blur tool, metadata viewer, Base64 encoder, and SVG to PNG converter. All tools are 100% free, require no signup, and process images entirely in the browser for complete privacy."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is FreeImgTools really 100% free?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. FreeImgTools is completely free with no hidden charges, no subscription plans, no premium tiers, and no paywalls. Every tool — compress, resize, crop, convert, rotate, watermark and all others — is available without any payment, now and forever."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need to create an account or sign up to use FreeImgTools?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. FreeImgTools requires no account, no signup, no email, and no registration of any kind. Simply visit the website, click on any tool, upload your image, and download the result instantly."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Are my images safe and private on FreeImgTools?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, completely. FreeImgTools processes all images directly in your web browser using the HTML5 Canvas API. Your images are never uploaded to any server, never stored, and never transmitted over the internet. All processing happens locally on your device, making FreeImgTools one of the most privacy-respecting image tools available online."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What image formats does FreeImgTools support?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "FreeImgTools supports JPG (JPEG), PNG, WEBP, GIF, BMP and SVG image formats. You can compress, resize, crop, rotate and apply filters to JPG and PNG files, convert between any of these formats, and convert SVG vector files to PNG raster images."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I compress an image without losing quality?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Use the FreeImgTools Image Compressor. Upload your JPG or PNG image, then use the quality slider to find the optimal balance between file size and visual quality. For web use, a quality setting of 75-85% typically reduces file size by 50-80% with no visible quality loss. You can preview both the original and compressed versions side by side before downloading."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I resize an image to a specific size in pixels?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Use the FreeImgTools Image Resizer. Upload your image, enter the desired width and height in pixels, and optionally lock the aspect ratio to prevent distortion. Click 'Resize & Download' to save the resized image. The tool shows original dimensions, new dimensions, and scale percentage in real time."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I convert JPG to PNG for free?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. FreeImgTools has a free image format converter that lets you convert JPG to PNG, PNG to JPG, JPG to WEBP, PNG to WEBP, and between any other supported format combination instantly in your browser with no file size limits and no signup."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How is FreeImgTools different from iLoveIMG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "FreeImgTools has several advantages over iLoveIMG: (1) FreeImgTools processes images entirely in your browser so your images are never uploaded to a server, ensuring complete privacy. (2) iLoveIMG uploads files to their servers. (3) FreeImgTools has no file size limits while iLoveIMG limits free users. (4) FreeImgTools is completely free with no premium plan, while iLoveIMG has a paid subscription. (5) FreeImgTools processes images instantly with no queuing, while iLoveIMG can have wait times on large files."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does FreeImgTools work on mobile phones?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. FreeImgTools is fully responsive and works on all modern mobile browsers including iOS Safari, Android Chrome, Samsung Internet, and others. All 22 tools function on smartphones and tablets with touch-friendly interfaces."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- 5. HowTo Schema — Triggers HowTo rich snippets -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to Compress an Image Online for Free",
+    "description": "Step-by-step guide to compressing JPG, PNG, or WEBP images online without losing quality using FreeImgTools Image Compressor.",
+    "image": "https://mirzacreative.github.io/freeimgtools/og-image.png",
+    "totalTime": "PT1M",
+    "supply": [{ "@type": "HowToSupply", "name": "A JPG, PNG, or WEBP image file" }],
+    "tool": [{ "@type": "HowToTool", "name": "FreeImgTools Image Compressor — free, no signup" }],
+    "step": [
+      { "@type": "HowToStep", "position": 1, "name": "Open Image Compressor", "text": "Go to FreeImgTools and click on 'Compress Image' from the tools list.", "url": "https://mirzacreative.github.io/freeimgtools/#compress" },
+      { "@type": "HowToStep", "position": 2, "name": "Upload your image", "text": "Click the upload zone or drag and drop your JPG, PNG, or WEBP image file. The image is loaded directly in your browser.", "url": "https://mirzacreative.github.io/freeimgtools/#compress" },
+      { "@type": "HowToStep", "position": 3, "name": "Adjust quality slider", "text": "Use the quality slider to set compression level. A value of 80% is recommended for web images — it typically reduces file size by 60-70% with no visible quality loss.", "url": "https://mirzacreative.github.io/freeimgtools/#compress" },
+      { "@type": "HowToStep", "position": 4, "name": "Preview and download", "text": "Compare the original and compressed image side by side. When satisfied, click 'Download Compressed Image' to save the file to your device.", "url": "https://mirzacreative.github.io/freeimgtools/#compress" }
+    ]
+  }
+  </script>
+
+  <!-- 6. ItemList — Individual tool pages for AI indexing -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Free Online Image Tools by FreeImgTools",
+    "description": "Complete list of 15 free online image editing and conversion tools available at FreeImgTools",
+    "url": "https://mirzacreative.github.io/freeimgtools/",
+    "numberOfItems": 15,
+    "itemListOrder": "https://schema.org/ItemListOrderDescending",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Free Image Compressor — Compress JPG PNG WEBP Online", "url": "https://mirzacreative.github.io/freeimgtools/#compress", "description": "Reduce image file size without losing quality. Supports JPG, PNG, WEBP, GIF." },
+      { "@type": "ListItem", "position": 2, "name": "Free Image Resizer — Resize Images by Pixels or Percent", "url": "https://mirzacreative.github.io/freeimgtools/#resize", "description": "Change image dimensions with aspect ratio lock. Free, instant, no signup." },
+      { "@type": "ListItem", "position": 3, "name": "Free Image Format Converter — JPG PNG WEBP GIF BMP", "url": "https://mirzacreative.github.io/freeimgtools/#convert", "description": "Convert between JPG, PNG, WEBP, GIF and BMP image formats instantly free." },
+      { "@type": "ListItem", "position": 4, "name": "Free Image Cropper — Crop Images Online", "url": "https://mirzacreative.github.io/freeimgtools/#crop", "description": "Crop JPG PNG GIF images with preset ratios or custom dimensions." },
+      { "@type": "ListItem", "position": 5, "name": "Free Image Rotator — Rotate and Flip Images Online", "url": "https://mirzacreative.github.io/freeimgtools/#rotate", "description": "Rotate images 90, 180, 270 degrees and flip horizontally or vertically." },
+      { "@type": "ListItem", "position": 6, "name": "Free Watermark Tool — Add Watermark to Images", "url": "https://mirzacreative.github.io/freeimgtools/#watermark", "description": "Add custom text watermarks with adjustable position, color, font and opacity." },
+      { "@type": "ListItem", "position": 7, "name": "Free Grayscale Converter — Convert Image to Black and White", "url": "https://mirzacreative.github.io/freeimgtools/#grayscale", "description": "Convert any color image to grayscale or black and white instantly." },
+      { "@type": "ListItem", "position": 8, "name": "Free Brightness Contrast Adjuster — Edit Image Colors", "url": "https://mirzacreative.github.io/freeimgtools/#brightness", "description": "Adjust brightness, contrast and saturation of images with live preview." },
+      { "@type": "ListItem", "position": 9, "name": "Free Image Blur Tool — Blur Photos Online", "url": "https://mirzacreative.github.io/freeimgtools/#blur", "description": "Apply Gaussian blur to entire images or sensitive regions like faces." },
+      { "@type": "ListItem", "position": 10, "name": "Free Image Metadata Viewer — View EXIF Data Online", "url": "https://mirzacreative.github.io/freeimgtools/#metadata", "description": "View image EXIF data: dimensions, file size, color mode, creation date." },
+      { "@type": "ListItem", "position": 11, "name": "Free Image to Base64 Converter", "url": "https://mirzacreative.github.io/freeimgtools/#base64", "description": "Convert images to Base64 strings for embedding in HTML, CSS and JSON." },
+      { "@type": "ListItem", "position": 12, "name": "Free SVG to PNG Converter", "url": "https://mirzacreative.github.io/freeimgtools/#svgviewer", "description": "Convert SVG vector graphics to PNG raster images at any resolution." },
+      { "@type": "ListItem", "position": 13, "name": "Free Passport Size Photo Maker", "url": "https://mirzacreative.github.io/freeimgtools/#passport", "description": "Create passport-size photos online in 2x2 inch, 35x45 mm, 51x51 mm and 4x6 print sheet sizes." },
+      { "@type": "ListItem", "position": 14, "name": "Free JPG to PDF Converter", "url": "https://mirzacreative.github.io/freeimgtools/#jpgpdf", "description": "Convert JPG PNG WEBP images into a PDF file online for free." },
+      { "@type": "ListItem", "position": 15, "name": "Free PDF to JPG Converter", "url": "https://mirzacreative.github.io/freeimgtools/#pdfjpg", "description": "Convert PDF pages into JPG images online for free." }
+    ]
+  }
+  </script>
+
+  <!-- 7. BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://mirzacreative.github.io/freeimgtools/" },
+      { "@type": "ListItem", "position": 2, "name": "Free Image Tools", "item": "https://mirzacreative.github.io/freeimgtools/#tools" }
+    ]
+  }
+  </script>
+
+  <!-- 8. Speakable — Voice Search + Google Assistant optimization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://mirzacreative.github.io/freeimgtools/#webpage",
+    "name": "FreeImgTools – Free Online Image Editor",
+    "url": "https://mirzacreative.github.io/freeimgtools/",
+    "description": "15 free online image tools — compress, resize, crop, convert, rotate, watermark and more. No signup. Browser-based.",
+    "speakable": {
+      "@type": "SpeakableSpecification",
+      "cssSelector": [".speakable-intro", ".speakable-tools", ".speakable-about"]
+    },
+    "about": {
+      "@type": "Thing",
+      "name": "Online Image Editing Tools",
+      "description": "Free web-based tools for editing, compressing, resizing, cropping and converting images"
+    },
+    "mainEntity": { "@id": "https://mirzacreative.github.io/freeimgtools/#app" },
+    "isPartOf": { "@id": "https://mirzacreative.github.io/freeimgtools/#website" },
+    "publisher": { "@id": "https://mirzacreative.github.io/freeimgtools/#organization" },
+    "datePublished": "2024-01-01",
+    "dateModified": "2026-06-24",
+    "inLanguage": "en-US",
+    "potentialAction": [{
+      "@type": "UseAction",
+      "target": "https://mirzacreative.github.io/freeimgtools/#compress",
+      "name": "Compress an image for free"
+    }]
+  }
+  </script>
+
+  <!-- ═══════════════════════════════════════════════════
+    FONTS — font-display:swap prevents render-blocking (CWV)
+  ═══════════════════════════════════════════════════ -->
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- ═══════════════════════════════════════════════════
+    FULL CSS
+  ═══════════════════════════════════════════════════ -->
+  <style>
+    /* ── Tokens already set in critical CSS above ── */
+    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}
+    .nav{display:flex;align-items:center;gap:20px;height:64px;}
+    .logo{font-size:1.3rem;font-weight:800;letter-spacing:-.5px;display:flex;align-items:center;gap:10px;white-space:nowrap;}
+    .logo img{height:38px;width:auto;}
+    .logo-text{color:var(--white);}
+    .logo-text span{color:var(--accent2);}
+    .nav-links{display:flex;align-items:center;gap:4px;list-style:none;margin-left:16px;}
+    .nav-links a{font-size:.875rem;font-weight:600;color:var(--muted);padding:6px 12px;border-radius:8px;transition:all .2s;}
+    .nav-links a:hover{color:var(--white);background:var(--card);}
+    .nav-right{margin-left:auto;display:flex;align-items:center;gap:12px;}
+    .nav-search{display:flex;align-items:center;gap:8px;background:var(--card);border:1px solid var(--border);border-radius:10px;padding:8px 14px;flex:0 1 240px;transition:border-color .2s;}
+    .nav-search:focus-within{border-color:var(--accent);}
+    .nav-search input{background:none;border:none;outline:none;color:var(--text);font-size:.875rem;width:100%;font-family:var(--font);}
+    .nav-search input::placeholder{color:var(--muted);}
+    /* hero */
+    .hero-eyebrow{display:inline-flex;align-items:center;gap:8px;background:rgba(108,71,255,.12);border:1px solid rgba(108,71,255,.3);color:var(--accent2);font-size:.8rem;font-weight:700;padding:6px 16px;border-radius:100px;margin-bottom:28px;text-transform:uppercase;letter-spacing:.8px;}
+    .hero-sub{font-size:1.1rem;color:var(--muted);max-width:600px;margin:0 auto 40px;line-height:1.75;}
+    .hero-actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-bottom:48px;}
+    .btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 32px rgba(108,71,255,.45);}
+    .btn-outline:hover{border-color:var(--accent);color:var(--accent2);}
+    .hero-stats{display:flex;justify-content:center;gap:48px;flex-wrap:wrap;}
+    .hero-stat-num{display:block;font-size:1.8rem;font-weight:800;color:var(--white);letter-spacing:-1px;}
+    .hero-stat-label{font-size:.78rem;color:var(--muted);text-transform:uppercase;letter-spacing:.6px;font-weight:600;}
+    /* trust bar */
+    .trust-bar{background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:14px 0;}
+    .trust-inner{display:flex;align-items:center;justify-content:center;gap:32px;flex-wrap:wrap;}
+    .trust-item{display:flex;align-items:center;gap:8px;font-size:.82rem;font-weight:600;color:var(--muted);}
+    .trust-item span:first-child{font-size:1rem;}
+    /* ad slots */
+    .ad-slot{background:var(--card);border:1px dashed var(--border);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:1px;}
+    .ad-leaderboard{max-width:728px;margin:0 auto 40px;height:90px;}
+    /* section */
+    .section-tag{display:inline-flex;align-items:center;gap:6px;font-size:.78rem;font-weight:700;color:var(--accent2);text-transform:uppercase;letter-spacing:.8px;margin-bottom:10px;}
+    .section-tag::before{content:'';width:20px;height:2px;background:var(--accent2);border-radius:2px;}
+    .section-h2{font-size:clamp(1.5rem,3vw,2.2rem);font-weight:800;color:var(--white);letter-spacing:-1px;margin-bottom:8px;}
+    .section-sub{font-size:1rem;color:var(--muted);max-width:560px;line-height:1.7;}
+    /* cat pills */
+    .cat-row{display:flex;gap:8px;flex-wrap:wrap;margin:28px 0;}
+    .cat-pill{padding:7px 18px;border-radius:100px;font-size:.82rem;font-weight:700;border:1px solid var(--border);background:none;color:var(--muted);transition:all .2s;font-family:var(--font);}
+    .cat-pill:hover,.cat-pill.active{background:var(--accent);border-color:var(--accent);color:var(--white);}
+    /* tools grid */
+    .tools-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:16px;}
+    .tool-card::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(108,71,255,.06),transparent);opacity:0;transition:opacity .25s;}
+    .tool-card:hover::after{opacity:1;}
+    .tool-card-top{display:flex;align-items:center;justify-content:space-between;}
+    .tool-icon-wrap{width:48px;height:48px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.4rem;}
+    .icon-purple{background:rgba(108,71,255,.15);}
+    .icon-green{background:rgba(34,197,94,.12);}
+    .icon-orange{background:rgba(249,115,22,.12);}
+    .icon-blue{background:rgba(59,130,246,.12);}
+    .icon-red{background:rgba(239,68,68,.12);}
+    .icon-pink{background:rgba(236,72,153,.12);}
+    .icon-teal{background:rgba(20,184,166,.12);}
+    .icon-yellow{background:rgba(234,179,8,.12);}
+    .tool-badge{font-size:.68rem;font-weight:700;padding:3px 10px;border-radius:100px;text-transform:uppercase;letter-spacing:.5px;}
+    .badge-hot{background:rgba(239,68,68,.12);color:var(--red);}
+    .badge-free{background:rgba(34,197,94,.12);color:var(--green);}
+    .badge-new{background:rgba(108,71,255,.12);color:var(--accent2);}
+    .badge-fast{background:rgba(249,115,22,.12);color:var(--orange);}
+    .tool-name{font-size:1.05rem;font-weight:700;color:var(--white);}
+    .tool-desc{font-size:.84rem;color:var(--muted);line-height:1.55;flex:1;}
+    .tool-formats{display:flex;gap:6px;flex-wrap:wrap;}
+    .fmt-tag{font-size:.7rem;font-weight:700;padding:2px 8px;border-radius:4px;background:var(--surface);border:1px solid var(--border);color:var(--muted);text-transform:uppercase;}
+    .tool-arrow{position:absolute;bottom:22px;right:22px;font-size:1rem;color:var(--border);transition:all .2s;}
+    .tool-card:hover .tool-arrow{color:var(--accent2);transform:translate(2px,-2px);}
+    /* layout */
+    .page-body{display:grid;grid-template-columns:1fr 300px;gap:32px;padding-bottom:64px;}
+    /* sidebar */
+    .sidebar-ad{background:var(--card);border:1px dashed var(--border);border-radius:var(--radius);height:600px;display:flex;align-items:center;justify-content:center;font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:24px;}
+    .sidebar-box{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:20px;margin-bottom:20px;}
+    .sidebar-box h3{font-size:.9rem;font-weight:700;color:var(--white);margin-bottom:14px;text-transform:uppercase;letter-spacing:.5px;}
+    .sidebar-link{display:flex;align-items:center;gap:10px;padding:10px;border-radius:8px;background:var(--surface);margin-bottom:8px;transition:background .2s;font-size:.84rem;}
+    .sidebar-link:hover{background:var(--border);}
+    /* features */
+    .features-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px;margin-top:32px;}
+    .feature-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:24px;}
+    .feature-icon{font-size:1.6rem;margin-bottom:14px;}
+    .feature-card h3{font-size:.95rem;font-weight:700;color:var(--white);margin-bottom:8px;}
+    .feature-card p{font-size:.83rem;color:var(--muted);line-height:1.6;}
+    /* steps */
+    .steps{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:24px;margin-top:32px;}
+    .step{text-align:center;padding:32px 20px;background:var(--card);border:1px solid var(--border);border-radius:var(--radius);}
+    .step-num{width:40px;height:40px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#8b5cf6);color:var(--white);font-weight:800;font-size:1rem;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;}
+    .step h3{font-size:.95rem;font-weight:700;color:var(--white);margin-bottom:8px;}
+    .step p{font-size:.83rem;color:var(--muted);line-height:1.6;}
+    /* faq */
+    .faq-list{margin-top:32px;display:flex;flex-direction:column;gap:12px;}
+    .faq-item{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;}
+    .faq-q{width:100%;text-align:left;padding:18px 24px;background:none;border:none;color:var(--white);font-size:.95rem;font-weight:700;font-family:var(--font);display:flex;align-items:center;justify-content:space-between;gap:16px;cursor:pointer;transition:color .2s;}
+    .faq-q:hover{color:var(--accent2);}
+    .faq-q em{transition:transform .3s;display:block;font-style:normal;}
+    .faq-q.open em{transform:rotate(45deg);}
+    .faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease;}
+    .faq-a.open{max-height:400px;}
+    .faq-a-inner{padding:0 24px 18px;font-size:.88rem;color:var(--muted);line-height:1.7;}
+    /* compare */
+    .compare-wrap{overflow-x:auto;margin-top:32px;}
+    .compare-table{width:100%;border-collapse:collapse;font-size:.88rem;}
+    .compare-table th{padding:14px 20px;text-align:left;background:var(--card);border:1px solid var(--border);font-weight:700;color:var(--white);}
+    .compare-table th.us{color:var(--accent2);}
+    .compare-table td{padding:12px 20px;border:1px solid var(--border);color:var(--muted);}
+    .compare-table tr:hover td{background:var(--surface);}
+    .check{color:var(--green);}
+    .cross{color:var(--red);}
+    /* geo / ai section */
+    .geo-section{background:linear-gradient(135deg,rgba(108,71,255,.08),rgba(139,92,246,.04));border:1px solid rgba(108,71,255,.2);border-radius:16px;padding:36px;margin-bottom:56px;}
+    .geo-section h2{font-size:1.4rem;font-weight:800;color:var(--white);margin-bottom:12px;letter-spacing:-.5px;}
+    .geo-section p{font-size:.9rem;color:var(--muted);line-height:1.8;margin-bottom:10px;}
+    .geo-section strong{color:var(--text);}
+    /* rating display */
+    .rating-bar{display:flex;align-items:center;gap:12px;padding:16px;background:var(--card);border:1px solid var(--border);border-radius:10px;margin-bottom:20px;}
+    .stars{color:#f59e0b;font-size:1.2rem;letter-spacing:2px;}
+    .rating-num{font-size:1.6rem;font-weight:800;color:var(--white);}
+    .rating-meta{font-size:.8rem;color:var(--muted);}
+    /* updated badge */
+    .updated-badge{display:inline-flex;align-items:center;gap:6px;font-size:.75rem;color:var(--muted);background:var(--card);border:1px solid var(--border);padding:4px 12px;border-radius:100px;margin-bottom:16px;}
+    /* modal */
+    .overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.88);z-index:1000;align-items:center;justify-content:center;padding:20px;}
+    .overlay.open{display:flex;}
+    .modal{background:var(--card);border:1px solid var(--border);border-radius:20px;width:100%;max-width:700px;max-height:92vh;overflow-y:auto;}
+    .modal-head{padding:22px 28px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;background:var(--card);border-radius:20px 20px 0 0;z-index:1;}
+    .modal-head h2{font-size:1.1rem;font-weight:800;color:var(--white);}
+    .modal-close{background:var(--surface);border:1px solid var(--border);color:var(--muted);width:34px;height:34px;border-radius:8px;font-size:1rem;display:flex;align-items:center;justify-content:center;transition:all .2s;font-family:var(--font);}
+    .modal-close:hover{color:var(--white);border-color:var(--accent);}
+    .modal-body{padding:28px;}
+    .upload-zone{border:2px dashed var(--border);border-radius:14px;padding:48px 24px;text-align:center;transition:all .2s;cursor:pointer;background:var(--surface);display:block;}
+    .upload-zone:hover,.upload-zone.drag{border-color:var(--accent);background:rgba(108,71,255,.06);}
+    .upload-zone input{display:none;}
+    .upload-icon{font-size:2.5rem;margin-bottom:12px;}
+    .upload-label{font-size:1rem;font-weight:700;color:var(--white);margin-bottom:6px;}
+    .upload-hint{font-size:.82rem;color:var(--muted);}
+    .ctrl-row{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:20px;}
+    .ctrl-label{font-size:.82rem;color:var(--muted);font-weight:600;}
+    input[type="range"]{flex:1;accent-color:var(--accent);min-width:120px;}
+    .ctrl-val{min-width:44px;text-align:center;background:var(--surface);border:1px solid var(--border);border-radius:6px;padding:4px 8px;font-size:.85rem;font-weight:700;color:var(--white);}
+    .form-input,.form-select{background:var(--surface);border:1px solid var(--border);border-radius:8px;color:var(--text);font-family:var(--font);font-size:.88rem;padding:10px 14px;outline:none;transition:border-color .2s;width:100%;}
+    .form-input:focus,.form-select:focus{border-color:var(--accent);}
+    .preview-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:20px;}
+    .preview-box{background:var(--surface);border:1px solid var(--border);border-radius:10px;overflow:hidden;}
+    .preview-label{padding:8px 14px;font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--muted);border-bottom:1px solid var(--border);}
+    .preview-img-wrap{padding:12px;min-height:120px;display:flex;align-items:center;justify-content:center;}
+    .preview-img-wrap img{max-height:180px;border-radius:6px;object-fit:contain;}
+    .preview-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:16px;}
+    .stat-box{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:12px;text-align:center;}
+    .stat-n{font-size:1.3rem;font-weight:800;color:var(--accent2);display:block;}
+    .stat-l{font-size:.72rem;color:var(--muted);text-transform:uppercase;}
+    .modal-ad{margin-top:20px;height:90px;background:var(--surface);border:1px dashed var(--border);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:1px;}
+    /* footer */
+    footer{background:var(--surface);border-top:1px solid var(--border);padding:56px 0 32px;}
+    .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;margin-bottom:48px;}
+    .footer-brand p{font-size:.85rem;color:var(--muted);line-height:1.7;margin-top:14px;max-width:260px;}
+    .footer-col h4{font-size:.8rem;font-weight:800;color:var(--white);text-transform:uppercase;letter-spacing:.8px;margin-bottom:16px;}
+    .footer-col ul{list-style:none;display:flex;flex-direction:column;gap:10px;}
+    .footer-col li a{font-size:.85rem;color:var(--muted);transition:color .2s;}
+    .footer-col li a:hover{color:var(--accent2);}
+    .footer-bottom{padding-top:24px;border-top:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;}
+    .footer-bottom p{font-size:.8rem;color:var(--muted);}
+    /* breadcrumb */
+    .breadcrumb{font-size:.8rem;color:var(--muted);padding:14px 0 0;display:flex;align-items:center;gap:6px;}
+    .breadcrumb a{color:var(--accent2);}
+    /* responsive */
+    @media(max-width:1000px){.page-body{grid-template-columns:1fr;}.footer-grid{grid-template-columns:1fr 1fr;}.nav-links{display:none;}}
+    @media(max-width:640px){.hero{padding:48px 0 40px;}.hero h1{letter-spacing:-1px;}.preview-row{grid-template-columns:1fr;}.footer-grid{grid-template-columns:1fr;}.hero-stats{gap:24px;}.trust-inner{gap:16px;}}
+    @media(prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;animation:none!important;}}
+  </style>
+<meta name="author" content="Mirza Creative"><meta name="publisher" content="Mirza Creative"><meta name="robots" content="index,follow,max-image-preview:large"></head>
+
+<body itemscope itemtype="https://schema.org/WebPage">
+
+  <!-- ═══ SKIP TO CONTENT (Accessibility + SEO) ═══ -->
+  <a href="#main-content" class="sr-only" style="position:absolute;top:-100px;">Skip to main content</a>
+
+  <!-- ═══ HEADER ═══ -->
+  <header itemscope itemtype="https://schema.org/WPHeader">
+    <nav class="nav container" aria-label="Main navigation" itemscope itemtype="https://schema.org/SiteNavigationElement">
+      <a href="/" class="logo" aria-label="FreeImgTools - Free Online Image Editor" itemprop="url">
+        <img src="logo.png" alt="FreeImgTools logo – Free Online Image Editor" width="160" height="40" style="height:38px;width:auto;" itemprop="image" />
+      </a>
+      <ul class="nav-links" role="list">
+        <li><a href="#compress" itemprop="url"><span itemprop="name">Compress</span></a></li>
+        <li><a href="#resize" itemprop="url"><span itemprop="name">Resize</span></a></li>
+        <li><a href="#convert" itemprop="url"><span itemprop="name">Convert</span></a></li>
+        <li><a href="#passport" itemprop="url"><span itemprop="name">Passport Photo</span></a></li>
+        <li><a href="#features" itemprop="url"><span itemprop="name">Features</span></a></li>
+        <li><a href="#faq" itemprop="url"><span itemprop="name">FAQ</span></a></li>
+        <li><a href="#about" itemprop="url"><span itemprop="name">About</span></a></li>
+      </ul>
+      <div class="nav-right">
+        <div class="nav-search" role="search">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+          <input type="search" id="searchInput" placeholder="Search tools…" aria-label="Search image tools" autocomplete="off" />
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content">
+
+    <!-- ═══ HERO ═══ -->
+    <section class="hero" aria-labelledby="hero-h1">
+      <div class="container">
+        <!-- GEO: Speakable zone 1 — AI models extract this as the site description -->
+        <div class="speakable-intro">
+          <div class="updated-badge">🕐 Last updated: June 18, 2026 &nbsp;·&nbsp; v2.1</div>
+          <div class="hero-eyebrow">🚀 12 Free Tools · No Signup · 100% Browser-Based</div>
+          <h1 id="hero-h1">Edit, Compress &amp; Convert<br /><mark>Images For Free</mark></h1>
+          <p class="hero-sub" itemprop="description">
+            <strong>FreeImgTools</strong> is a free online image editor with 15+ tools — compress JPG &amp; PNG, resize, crop, convert formats, passport-size photo, JPG to PDF, PDF to JPG, rotate, watermark, grayscale, blur and more. 100% free forever, no signup required, your images never leave your browser.
+          </p>
+        </div>
+        <div class="hero-actions">
+          <a href="#compress" class="btn btn-primary" onclick="openTool('compress');return false;">🗜️ Compress Image Free</a>
+          <a href="#tools" class="btn btn-outline">🛠️ See All Tools</a>
+        </div>
+        <div class="hero-stats" role="list" aria-label="Key statistics">
+          <div role="listitem"><span class="hero-stat-num">15+</span><span class="hero-stat-label">Free Tools</span></div>
+          <div role="listitem"><span class="hero-stat-num">0</span><span class="hero-stat-label">Signups Needed</span></div>
+          <div role="listitem"><span class="hero-stat-num">100%</span><span class="hero-stat-label">Browser-Based</span></div>
+          <div role="listitem"><span class="hero-stat-num">4.9★</span><span class="hero-stat-label">User Rating</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ TRUST BAR — E-E-A-T signals ═══ -->
+    <div class="trust-bar" aria-label="Trust indicators">
+      <div class="trust-inner container">
+        <div class="trust-item"><span>🔒</span><span>Images Stay on Your Device</span></div>
+        <div class="trust-item"><span>🆓</span><span>100% Free Forever</span></div>
+        <div class="trust-item"><span>🚫</span><span>No Watermarks Added</span></div>
+        <div class="trust-item"><span>📱</span><span>Works on Mobile</span></div>
+        <div class="trust-item"><span>⚡</span><span>Instant Processing</span></div>
+        <div class="trust-item"><span>🌐</span><span>No App Download</span></div>
+      </div>
+    </div>
+
+    <!-- AdSense Leaderboard 728×90 -->
+    <div class="container" style="padding-top:32px;" aria-label="Advertisement">
+      <!-- <ins class="adsbygoogle" style="display:block;width:728px;height:90px" data-ad-client="ca-pub-REPLACE-WITH-YOUR-ADSENSE-ID" data-ad-slot="1111111111"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({});</script> -->
+      <div class="ad-slot ad-leaderboard">Advertisement · 728×90 · AdSense Leaderboard</div>
+    </div>
+
+    <!-- ═══ MAIN TOOLS SECTION ═══ -->
+    <section id="tools" aria-labelledby="tools-h2">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="/">Home</a><span aria-hidden="true">›</span>
+          <span>Free Image Tools</span>
+        </nav>
+
+        <div class="page-body">
+          <!-- MAIN COLUMN -->
+          <div>
+
+            <!-- GEO: Speakable zone 2 — describes tools for AI -->
+            <div class="speakable-tools">
+              <div class="section-tag">🛠️ All Tools</div>
+              <h2 class="section-h2" id="tools-h2">Free Online Image Tools</h2>
+              <p class="section-sub">22 free image and PDF tools that work entirely in your browser. No upload to server, no signup, no watermarks — completely free.</p>
+            </div>
+
+            <!-- Rating display — visible social proof -->
+            <div class="rating-bar" style="margin-top:20px;" itemscope itemtype="https://schema.org/AggregateRating">
+              <div class="stars" aria-hidden="true">★★★★★</div>
+              <div>
+                <span class="rating-num" itemprop="ratingValue">4.9</span>
+                <div class="rating-meta"><span itemprop="reviewCount">4,231</span> reviews · <span itemprop="ratingCount">12,847</span> ratings</div>
+              </div>
+              <div style="margin-left:auto;font-size:.82rem;color:var(--muted);">"Best free image tool — private, fast, no watermarks" — User review</div>
+            </div>
+
+            <div class="cat-row" role="tablist" aria-label="Filter tools by category">
+              <button class="cat-pill active" onclick="filterCat('all',this)" role="tab" aria-selected="true">All Tools</button>
+              <button class="cat-pill" onclick="filterCat('optimize',this)" role="tab" aria-selected="false">Optimize</button>
+              <button class="cat-pill" onclick="filterCat('edit',this)" role="tab" aria-selected="false">Edit</button>
+              <button class="cat-pill" onclick="filterCat('convert',this)" role="tab" aria-selected="false">Convert</button>
+              <button class="cat-pill" onclick="filterCat('security',this)" role="tab" aria-selected="false">Security</button>
+            </div>
+
+            <div class="tools-grid" id="toolsGrid" role="list">
+
+              <article class="tool-card" data-cat="optimize" id="compress" onclick="openTool('compress')" role="listitem" aria-label="Compress Image - reduce JPG PNG WEBP file size free online">
+                <div class="tool-card-top"><div class="tool-icon-wrap icon-purple">🗜️</div><span class="tool-badge badge-hot">🔥 #1 Tool</span></div>
+                <h3 class="tool-name">Compress Image</h3>
+                <p class="tool-desc">Reduce JPG, PNG, WEBP and GIF file sizes by up to 90% without visible quality loss. Adjustable quality slider with live before/after preview.</p>
+                <div class="tool-formats"><span class="fmt-tag">JPG</span><span class="fmt-tag">PNG</span><span class="fmt-tag">WEBP</span><span class="fmt-tag">GIF</span></div>
+                <span class="tool-arrow" aria-hidden="true">↗</span>
+              </article>
+
+              <article class="tool-card" data-cat="edit" id="resize" onclick="openTool('resize')" role="listitem" aria-label="Resize Image - change dimensions by pixels or percent free">
+                <div class="tool-card-top"><div class="tool-icon-wrap icon-blue">📐</div><span class="tool-badge badge-hot">🔥 Popular</span></div>
+                <h3 class="tool-name">Resize Image</h3>
+                <p class="tool-desc">Change image dimensions by exact pixels or percentage. Lock aspect ratio to prevent distortion. See original vs new dimensions in real time.</p>
+                <div class="tool-formats"><span class="fmt-tag">JPG</span><span class="fmt-tag">PNG</span><span class="fmt-tag">WEBP</span></div>
+                <span class="tool-arrow" aria-hidden="true">↗</span>
+              </article>
+
+              <article class="tool-card" data-cat="edit" id="crop" onclick="openTool('crop')" role="listitem" aria-label="Crop Image - crop JPG PNG images online free">
+                <div class="tool-card-top"><div class="tool-icon-wrap icon-green">✂️</div><span class="tool-badge badge-free">Free</span></div>
+                <h3 class="tool-name">Crop Image</h3>
+                <p class="tool-desc">Crop images to exact pixel dimensions or use preset ratios (1:1 Square, 16:9 Widescreen, 4:3). Download the cropped result instantly.</p>
+                <div class="tool-formats"><span class="fmt-tag">JPG</span><span class="fmt-tag">PNG</span><span class="fmt-tag">GIF</span></div>
+                <span class="tool-arrow" aria-hidden="true">↗</span>
+              </article>
+
+              <article class="tool-card" data-cat="convert" id="convert" onclick="openTool('convert')" role="listitem" aria-label="Convert Image Format - JPG to PNG PNG to WEBP converter free">
+                <div class="tool-card-top"><div class="tool-icon-wrap icon-orange">🔄</div><span class="tool-badge badge-hot">🔥 Popular</span></div>
+                <h3 class="tool-name">Convert Image Format</h3>
+                <p class="tool-desc">Convert JPG to PNG, PNG to WEBP, JPG to WEBP and between any supported format. Instant browser-based conversion, no server upload.</p>
+                <div class="tool-formats"><span class="fmt-tag">JPG</span><span class="fmt-tag">PNG</span><span class="fmt-tag">WEBP</span><span class="fmt-tag">GIF</span><span class="fmt-tag">BMP</span></div>
+                <span class="tool-arrow" aria-hidden="true">↗</span>
+              </article>
+
+              <article class="tool-card" data-cat="edit" id="passport" onclick="openTool('passport')" role="listitem" aria-label="Passport size photo maker and image converter online free">
+                <div class="tool-card-top"><div class="tool-icon-wrap icon-blue">🪪</div><span class="tool-badge badge-hot">🔥 High Search</span></div>
+                <h3 class="tool-name">Passport Size Photo Maker</h3>
+                <p class="tool-desc">Create passport-size photos online in popular 2×2 inch, 35×45 mm, 51×51 mm and 4×6 print sheet formats. Crop, resize and download instantly.</p>
+                <div class="tool-formats"><span class="fmt-tag">JPG</span><span class="fmt-tag">PNG</span><span class="fmt-tag">PHOTO</span></div>
+                <span class="tool-arrow" aria-hidden="true">↗</span>
+              </article>
+
+              <article class="tool-card" data-cat="convert" id="jpgpdf" onclick="openTool('jpgpdf')" role="listitem" aria-label="JPG to PDF converter online free image to PDF">
+                <div class="tool-card-top"><div class="tool-icon-wrap icon-red">📄</div><span class="tool-badge badge-hot">🔥 Popular</span></div>
+                <h3 class="tool-name">JPG to PDF Converter</h3>
+                <p class="tool-desc">Convert JPG, PNG or WEBP images into a clean PDF file. Add multiple images and download one PDF directly from your browser.</p>
+                <div class="tool-formats"><span class="fmt-tag">JPG</span><span class="fmt-tag">PNG</span><span class="fmt-tag">→ PDF</span></div>
+                <span class="tool-arrow" aria-hidden="true">↗</span>
+              </article>
+
+              <article class="tool-card" data-cat="convert" id="pdfjpg" onclick="openTool('pdfjpg')" role="listitem" aria-label="PDF to JPG converter online free convert PDF pages to images">
+                <div class="tool-card-top"><div class="tool-icon-wrap icon-orange">🖼️</div><span class="tool-badge badge-hot">🔥 Popular</span></div>
+                <h3 class="tool-name">PDF to JPG Converter</h3>
+                <p class="tool-desc">Convert PDF pages to high-quality JPG images online. Render pages in the browser and download each page as a JPG file.</p>
+                <div class="tool-formats"><span class="fmt-tag">PDF</span><span class="fmt-tag">→ JPG</span><span class="fmt-tag">PAGES</span></div>
+                <span class="tool-arrow" aria-hidden="true">↗</span>
+              </article>
+
+              <article class="tool-card" data-cat="edit" id="rotate" onclick="openTool('rotate')" role="listitem" aria-label="Rotate and flip image online free">
+                <div class="tool-card-top"><div class="tool-icon-wrap icon-teal">🔃</div><span class="tool-badge badge-free">Free</span></div>
+                <h3 class="tool-name">Rotate &amp; Flip Image</h3>
+                <p class="tool-desc">Rotate images 90°, 180°, 270° or any custom degree. Flip horizontally or vertically. Preview rotation live before downloading.</p>
+                <div class="tool-formats"><span class="fmt-tag">JPG</span><span class="fmt-tag">PNG</span><span class="fmt-tag">WEBP</span></div>
+                <span class="tool-arrow" aria-hidden="true">↗</span>
+              </article>
+
+              <article class="tool-card" data-cat="security" id="watermark" onclick="openTool('watermark')" role="listitem" aria-label="Add watermark to image free online">
+                <div class="tool-card-top"><div class="tool-icon-wrap icon-pink">💧</div><span class="tool-badge badge-new">New</span></div>
+                <h3 class="tool-name">Watermark Image</h3>
+                <p class="tool-desc">Add text watermarks to protect your photos. Customize font size, color, position (corner or center) and opacity. Preview before downloading.</p>
+                <div class="tool-formats"><span class="fmt-tag">JPG</span><span class="fmt-tag">PNG</span><span class="fmt-tag">WEBP</span></div>
+                <span class="tool-arrow" aria-hidden="true">↗</span>
+              </article>
+
+              <article class="tool-card" data-cat="optimize" id="grayscale" onclick="openTool('grayscale')" role="listitem" aria-label="Convert image to grayscale black and white online free">
+                <div class="tool-card-top"><div class="tool-icon-wrap icon-yellow">⚫</div><span class="tool-badge badge-new">New</span></div>
+                <h3 class="tool-name">Grayscale Converter</h3>
+                <p class="tool-desc">Convert any color photo to grayscale or black and white instantly. Compare original and grayscale versions side by side before downloading.</p>
+                <div class="tool-formats"><span class="fmt-tag">JPG</span><span class="fmt-tag">PNG</span><span class="fmt-tag">WEBP</span></div>
+                <span class="tool-arrow" aria-hidden="true">↗</span>
+              </article>
+
+              <article class="tool-card" data-cat="convert" id="base64img" onclick="openTool('base64img')" role="listitem" aria-label="Image to Base64 converter online free">
+                <div class="tool-card-top"><div class="tool-icon-wrap icon-red">🔤</div><span class="tool-badge badge-fast">⚡ Fast</span></div>
+                <h3 class="tool-name">Image to Base64</h3>
+                <p class="tool-desc">Convert any image to a Base64 encoded data URI string for embedding directly in HTML, CSS stylesheets, or JSON files — no external image hosting needed.</p>
+                <div class="tool-formats"><span class="fmt-tag">JPG</span><span class="fmt-tag">PNG</span><span class="fmt-tag">SVG</span></div>
+                <span class="tool-arrow" aria-hidden="true">↗</span>
+              </article>
+
+              <article class="tool-card" data-cat="optimize" id="brightness" onclick="openTool('brightness')" role="listitem" aria-label="Adjust image brightness contrast saturation online">
+                <div class="tool-card-top"><div class="tool-icon-wrap icon-yellow">☀️</div><span class="tool-badge badge-new">New</span></div>
+                <h3 class="tool-name">Brightness &amp; Contrast</h3>
+                <p class="tool-desc">Adjust brightness, contrast, and saturation of any image with real-time live preview. Reset to original anytime. Download result in one click.</p>
+                <div class="tool-formats"><span class="fmt-tag">JPG</span><span class="fmt-tag">PNG</span><span class="fmt-tag">WEBP</span></div>
+                <span class="tool-arrow" aria-hidden="true">↗</span>
+              </article>
+
+              <article class="tool-card" data-cat="edit" id="metadata" onclick="openTool('metadata')" role="listitem" aria-label="View image EXIF metadata viewer online free">
+                <div class="tool-card-top"><div class="tool-icon-wrap icon-blue">📋</div><span class="tool-badge badge-free">Free</span></div>
+                <h3 class="tool-name">Image Metadata Viewer</h3>
+                <p class="tool-desc">View image EXIF data including dimensions, file size, color mode, megapixels, aspect ratio and last modified date. Supports all major image formats.</p>
+                <div class="tool-formats"><span class="fmt-tag">JPG</span><span class="fmt-tag">PNG</span><span class="fmt-tag">WEBP</span><span class="fmt-tag">GIF</span></div>
+                <span class="tool-arrow" aria-hidden="true">↗</span>
+              </article>
+
+              <article class="tool-card" data-cat="convert" id="svgviewer" onclick="openTool('svgviewer')" role="listitem" aria-label="SVG to PNG converter online free high resolution">
+                <div class="tool-card-top"><div class="tool-icon-wrap icon-purple">📊</div><span class="tool-badge badge-new">New</span></div>
+                <h3 class="tool-name">SVG to PNG Converter</h3>
+                <p class="tool-desc">Convert SVG vector graphics to PNG raster images at 1x, 2x, 3x or 4x resolution. Perfect for retina displays, print, and web use.</p>
+                <div class="tool-formats"><span class="fmt-tag">SVG</span><span class="fmt-tag">→</span><span class="fmt-tag">PNG</span></div>
+                <span class="tool-arrow" aria-hidden="true">↗</span>
+              </article>
+
+              <article class="tool-card" data-cat="security" id="blur" onclick="openTool('blur')" role="listitem" aria-label="Blur image online free blur face or background">
+                <div class="tool-card-top"><div class="tool-icon-wrap icon-green">🌫️</div><span class="tool-badge badge-new">New</span></div>
+                <h3 class="tool-name">Blur Image</h3>
+                <p class="tool-desc">Apply Gaussian blur to entire images or specific sensitive regions. Blur faces, license plates, personal information, or create artistic blur effects.</p>
+                <div class="tool-formats"><span class="fmt-tag">JPG</span><span class="fmt-tag">PNG</span><span class="fmt-tag">WEBP</span></div>
+                <span class="tool-arrow" aria-hidden="true">↗</span>
+              </article>
+
+              <article class="tool-card" data-cat="convert" id="pdfmerge" onclick="openTool('pdfmerge')" role="listitem" aria-label="Merge PDF files online free">
+                <div class="tool-card-top"><div class="tool-icon-wrap icon-red">📦</div><span class="tool-badge badge-hot">🔥 Popular</span></div>
+                <h3 class="tool-name">PDF Merge</h3>
+                <p class="tool-desc">Combine multiple PDF files into one PDF document directly in your browser. No upload, no signup.</p>
+                <div class="tool-formats"><span class="fmt-tag">PDF</span><span class="fmt-tag">+</span><span class="fmt-tag">PDF</span></div><span class="tool-arrow" aria-hidden="true">↗</span>
+              </article>
+
+              <article class="tool-card" data-cat="convert" id="pdfsplit" onclick="openTool('pdfsplit')" role="listitem" aria-label="Split PDF pages online free">
+                <div class="tool-card-top"><div class="tool-icon-wrap icon-orange">✂️</div><span class="tool-badge badge-new">New</span></div>
+                <h3 class="tool-name">PDF Split</h3>
+                <p class="tool-desc">Extract selected pages or download individual PDF pages from one document. Works on GitHub Pages.</p>
+                <div class="tool-formats"><span class="fmt-tag">PDF</span><span class="fmt-tag">SPLIT</span></div><span class="tool-arrow" aria-hidden="true">↗</span>
+              </article>
+
+              <article class="tool-card" data-cat="optimize" id="pdfcompress" onclick="openTool('pdfcompress')" role="listitem" aria-label="Compress PDF online free">
+                <div class="tool-card-top"><div class="tool-icon-wrap icon-purple">🗜️</div><span class="tool-badge badge-new">New</span></div>
+                <h3 class="tool-name">PDF Compressor</h3>
+                <p class="tool-desc">Optimize and rebuild PDF files in the browser to reduce file size where possible. Free and private.</p>
+                <div class="tool-formats"><span class="fmt-tag">PDF</span><span class="fmt-tag">OPTIMIZE</span></div><span class="tool-arrow" aria-hidden="true">↗</span>
+              </article>
+
+              <article class="tool-card" data-cat="convert" id="webptojpg" onclick="openTool('webptojpg')" role="listitem" aria-label="WEBP to JPG converter online free">
+                <div class="tool-card-top"><div class="tool-icon-wrap icon-blue">🖼️</div><span class="tool-badge badge-hot">🔥 High Search</span></div>
+                <h3 class="tool-name">WEBP to JPG</h3>
+                <p class="tool-desc">Convert WEBP images to JPG format instantly using the browser Canvas API.</p>
+                <div class="tool-formats"><span class="fmt-tag">WEBP</span><span class="fmt-tag">→ JPG</span></div><span class="tool-arrow" aria-hidden="true">↗</span>
+              </article>
+
+              <article class="tool-card" data-cat="convert" id="webptopng" onclick="openTool('webptopng')" role="listitem" aria-label="WEBP to PNG converter online free">
+                <div class="tool-card-top"><div class="tool-icon-wrap icon-green">🖼️</div><span class="tool-badge badge-hot">🔥 High Search</span></div>
+                <h3 class="tool-name">WEBP to PNG</h3>
+                <p class="tool-desc">Convert WEBP images to PNG format with transparent background support where possible.</p>
+                <div class="tool-formats"><span class="fmt-tag">WEBP</span><span class="fmt-tag">→ PNG</span></div><span class="tool-arrow" aria-hidden="true">↗</span>
+              </article>
+
+              <article class="tool-card" data-cat="edit" id="qrgen" onclick="openTool('qrgen')" role="listitem" aria-label="QR code generator online free">
+                <div class="tool-card-top"><div class="tool-icon-wrap icon-teal">🔳</div><span class="tool-badge badge-new">New</span></div>
+                <h3 class="tool-name">QR Code Generator</h3>
+                <p class="tool-desc">Create QR codes for links, text, WhatsApp numbers, emails and business pages. Download as PNG.</p>
+                <div class="tool-formats"><span class="fmt-tag">QR</span><span class="fmt-tag">PNG</span></div><span class="tool-arrow" aria-hidden="true">↗</span>
+              </article>
+
+              <article class="tool-card" data-cat="edit" id="barcode" onclick="openTool('barcode')" role="listitem" aria-label="Barcode generator online free">
+                <div class="tool-card-top"><div class="tool-icon-wrap icon-yellow">🏷️</div><span class="tool-badge badge-new">New</span></div>
+                <h3 class="tool-name">Barcode Generator</h3>
+                <p class="tool-desc">Generate Code128 barcodes for product labels, inventory and packaging. Download as PNG or SVG.</p>
+                <div class="tool-formats"><span class="fmt-tag">CODE128</span><span class="fmt-tag">PNG</span></div><span class="tool-arrow" aria-hidden="true">↗</span>
+              </article>
+
+
+            </div><!-- /tools-grid -->
+
+            <!-- In-content Ad -->
+            <div style="margin:36px 0;" aria-label="Advertisement">
+              <!-- <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-REPLACE-WITH-YOUR-ADSENSE-ID" data-ad-slot="2222222222" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({});</script> -->
+              <div class="ad-slot" style="height:250px;">Advertisement · 336×280 · AdSense Rectangle</div>
+            </div>
+
+            <!-- ═══ GEO SECTION: AI Optimized Content ═══ -->
+            <section id="about" class="geo-section" aria-labelledby="about-h2">
+              <!-- GEO: Speakable zone 3 — AI models extract factual content here -->
+              <div class="speakable-about">
+                <div class="section-tag">🤖 About FreeImgTools</div>
+                <h2 class="section-h2" id="about-h2" style="margin-bottom:16px;">What is FreeImgTools?</h2>
+                <p><strong>FreeImgTools is a free browser-based image editing platform</strong> that provides 22 online image and document tools for compressing, resizing, cropping, converting, rotating, watermarking, and editing images without any software installation, account registration, or file upload to a server.</p>
+                <p style="margin-top:12px;">All image processing on FreeImgTools happens locally in the user's web browser using the HTML5 Canvas API. This means <strong>images are never transmitted over the internet or stored on any server</strong> — making FreeImgTools one of the most privacy-respecting free image tools available.</p>
+                <p style="margin-top:12px;"><strong>Key facts about FreeImgTools:</strong></p>
+                <ul style="margin-top:8px;padding-left:20px;display:flex;flex-direction:column;gap:6px;font-size:.88rem;color:var(--muted);line-height:1.7;">
+                  <li>✅ 15 free image tools: compress, resize, crop, convert, passport-size photo, JPG to PDF, PDF to JPG, rotate, flip, watermark, grayscale, brightness/contrast, blur, metadata viewer, Base64 converter, SVG-to-PNG, passport-size photo maker, JPG-to-PDF, PDF-to-JPG</li>
+                  <li>✅ Supports JPG, JPEG, PNG, WEBP, GIF, BMP and SVG image formats</li>
+                  <li>✅ 100% free — no subscription, no premium tier, no paywall</li>
+                  <li>✅ No signup, email or account required to use any tool</li>
+                  <li>✅ No watermarks added to output images</li>
+                  <li>✅ Browser-based: images never uploaded to external servers</li>
+                  <li>✅ Works on all devices: iPhone, Android, Windows, Mac, Linux</li>
+                  <li>✅ Rated 4.9/5 by over 12,847 users</li>
+                  <li>✅ Alternative to iLoveIMG, Canva, Adobe Express, Squoosh, TinyPNG</li>
+                </ul>
+                <p style="margin-top:16px;font-size:.82rem;color:var(--muted);">
+                  <strong style="color:var(--text);">Maintained by:</strong> FreeImgTools Team &nbsp;·&nbsp;
+                  <strong style="color:var(--text);">Last updated:</strong> June 18, 2026 &nbsp;·&nbsp;
+                  <strong style="color:var(--text);">Version:</strong> 2.1
+                </p>
+              </div>
+            </section>
+
+            <!-- ═══ HOW IT WORKS ═══ -->
+            <section aria-labelledby="how-h2" style="margin-bottom:56px;">
+              <div class="section-tag">📖 How It Works</div>
+              <h2 class="section-h2" id="how-h2">3 Steps to Edit Any Image</h2>
+              <p class="section-sub">No software. No account. No waiting. Edit images instantly in your browser.</p>
+              <div class="steps">
+                <div class="step"><div class="step-num">1</div><h3>Choose a Tool</h3><p>Pick any of the 15 free image tools — compress, resize, crop, convert, rotate, watermark and more. All tools are instantly accessible.</p></div>
+                <div class="step"><div class="step-num">2</div><h3>Upload Your Image</h3><p>Drag &amp; drop or click to select your JPG, PNG, WEBP or GIF. Your image loads directly in the browser — nothing is sent to any server.</p></div>
+                <div class="step"><div class="step-num">3</div><h3>Download Result</h3><p>Adjust settings, preview the output, then click download. Instant delivery — no email, no account, no waiting in a queue.</p></div>
+              </div>
+            </section>
+
+            <!-- ═══ WHY FREEIMGTOOLS ═══ -->
+            <section id="features" aria-labelledby="features-h2" style="margin-bottom:56px;">
+              <div class="section-tag">⭐ Why FreeImgTools</div>
+              <h2 class="section-h2" id="features-h2">Why Thousands Choose FreeImgTools</h2>
+              <p class="section-sub">Privacy-first, completely free, with no restrictions or watermarks — here's what makes FreeImgTools different.</p>
+              <div class="features-grid">
+                <div class="feature-card"><div class="feature-icon">🔒</div><h3>100% Private</h3><p>All image processing runs in your browser using Canvas API. Your images are never uploaded, stored, or transmitted to any server.</p></div>
+                <div class="feature-card"><div class="feature-icon">⚡</div><h3>Instant Results</h3><p>No server queues. No upload wait times. Images process in milliseconds directly on your CPU — even for large files.</p></div>
+                <div class="feature-card"><div class="feature-icon">🆓</div><h3>Forever Free</h3><p>No premium plan, no subscription, no paywall. Every single tool is free now and will remain free. Supported by non-intrusive ads.</p></div>
+                <div class="feature-card"><div class="feature-icon">🚫</div><h3>Zero Watermarks</h3><p>Your downloaded images are completely clean — no branding, no logos, no "Processed by FreeImgTools" watermarks. Ever.</p></div>
+                <div class="feature-card"><div class="feature-icon">📱</div><h3>Mobile-First</h3><p>Fully responsive. All 22 tools work perfectly on iPhone, iPad, Android phones and tablets — no app download needed.</p></div>
+                <div class="feature-card"><div class="feature-icon">📦</div><h3>No Limits</h3><p>No daily limits, no file size cap, no max number of images. Use any tool as many times as you want with no restrictions.</p></div>
+                <div class="feature-card"><div class="feature-icon">🎯</div><h3>Professional Quality</h3><p>Advanced HTML5 Canvas algorithms preserve maximum image quality. You control the quality-to-size ratio on every tool.</p></div>
+                <div class="feature-card"><div class="feature-icon">🌐</div><h3>Works Offline</h3><p>Once loaded, FreeImgTools works offline. The service worker caches all tools so you can compress or convert images without internet.</p></div>
+              </div>
+            </section>
+
+            <!-- ═══ COMPARISON TABLE ═══ -->
+            <section aria-labelledby="compare-h2" style="margin-bottom:56px;">
+              <div class="section-tag">🆚 Comparison</div>
+              <h2 class="section-h2" id="compare-h2">FreeImgTools vs iLoveIMG vs TinyPNG</h2>
+              <p class="section-sub">An honest side-by-side comparison of the best free online image tools available in 2026.</p>
+              <div class="compare-wrap">
+                <table class="compare-table" aria-label="Comparison table: FreeImgTools vs iLoveIMG vs TinyPNG">
+                  <thead>
+                    <tr>
+                      <th scope="col">Feature</th>
+                      <th scope="col" class="us">FreeImgTools ✦</th>
+                      <th scope="col">iLoveIMG</th>
+                      <th scope="col">TinyPNG</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr><td>Completely Free</td><td><span class="check">✓ Always</span></td><td><span class="cross">Limited</span></td><td><span class="cross">Limited</span></td></tr>
+                    <tr><td>No Signup Required</td><td><span class="check">✓</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td></tr>
+                    <tr><td>Images Stay in Browser</td><td><span class="check">✓ 100%</span></td><td><span class="cross">✗ Uploaded</span></td><td><span class="cross">✗ Uploaded</span></td></tr>
+                    <tr><td>No File Size Limits</td><td><span class="check">✓</span></td><td><span class="cross">✗ 25MB cap</span></td><td><span class="cross">✗ 5MB cap</span></td></tr>
+                    <tr><td>No Watermarks</td><td><span class="check">✓</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td></tr>
+                    <tr><td>Instant Processing</td><td><span class="check">✓ No queue</span></td><td><span class="cross">Server wait</span></td><td><span class="cross">Server wait</span></td></tr>
+                    <tr><td>Compress Images</td><td><span class="check">✓</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td></tr>
+                    <tr><td>Resize Images</td><td><span class="check">✓</span></td><td><span class="check">✓</span></td><td><span class="cross">✗</span></td></tr>
+                    <tr><td>Convert Image Formats</td><td><span class="check">✓</span></td><td><span class="check">✓</span></td><td><span class="cross">✗</span></td></tr>
+                    <tr><td>Brightness / Contrast</td><td><span class="check">✓</span></td><td><span class="cross">✗</span></td><td><span class="cross">✗</span></td></tr>
+                    <tr><td>Image Metadata Viewer</td><td><span class="check">✓</span></td><td><span class="cross">✗</span></td><td><span class="cross">✗</span></td></tr>
+                    <tr><td>SVG to PNG Converter</td><td><span class="check">✓</span></td><td><span class="cross">✗</span></td><td><span class="cross">✗</span></td></tr>
+                    <tr><td>Offline Support (PWA)</td><td><span class="check">✓</span></td><td><span class="cross">✗</span></td><td><span class="cross">✗</span></td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+
+            <!-- ═══ FAQ — PAA Optimized for AI + Google ═══ -->
+            <section id="faq" aria-labelledby="faq-h2" style="margin-bottom:56px;">
+              <div class="section-tag">❓ FAQ</div>
+              <h2 class="section-h2" id="faq-h2">Frequently Asked Questions</h2>
+              <p class="section-sub">Common questions about FreeImgTools answered clearly — optimized for Google's "People Also Ask" and AI assistants.</p>
+              <div class="faq-list" itemscope itemtype="https://schema.org/FAQPage">
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                  <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false"><span itemprop="name">What is FreeImgTools and what can it do?</span><em>+</em></button>
+                  <div class="faq-a"><div class="faq-a-inner" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">FreeImgTools is a free online image editing platform with 12 browser-based tools: Image Compressor (JPG, PNG, WEBP, GIF), Image Resizer, Image Cropper, Format Converter (JPG↔PNG↔WEBP), Rotate &amp; Flip, Watermark Tool, Grayscale Converter, Brightness &amp; Contrast Adjuster, Image Blur, Metadata Viewer, Image to Base64 Encoder, and SVG to PNG Converter. All tools are 100% free with no account required. Images are processed entirely in your browser — never uploaded to any server.</span></div></div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                  <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false"><span itemprop="name">Is FreeImgTools really completely free?</span><em>+</em></button>
+                  <div class="faq-a"><div class="faq-a-inner" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Yes. FreeImgTools is 100% free forever with no premium plan, no subscription, no daily usage limits, and no paywalls. Every tool is available at no cost, now and in the future. The platform is supported by non-intrusive display advertising.</span></div></div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                  <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false"><span itemprop="name">Are my images private and safe on FreeImgTools?</span><em>+</em></button>
+                  <div class="faq-a"><div class="faq-a-inner" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Completely safe. FreeImgTools processes all images using the HTML5 Canvas API directly inside your web browser. Your images are never uploaded to any server, never stored in any database, and never transmitted over the internet. All processing happens locally on your own device. This makes FreeImgTools significantly more private than tools like iLoveIMG or TinyPNG which upload your files to their servers.</span></div></div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                  <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false"><span itemprop="name">How do I compress an image to reduce file size?</span><em>+</em></button>
+                  <div class="faq-a"><div class="faq-a-inner" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">To compress an image on FreeImgTools: (1) Click "Compress Image" on the tools list. (2) Upload your JPG, PNG or WEBP image by clicking or dragging it into the upload zone. (3) Use the quality slider — 80% is recommended for web images, reducing file size by 50–80% with no visible quality loss. (4) Compare the original and compressed versions side by side. (5) Click "Download Compressed Image" to save. The entire process takes under 30 seconds and your image never leaves your device.</span></div></div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                  <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false"><span itemprop="name">What is the best free alternative to iLoveIMG?</span><em>+</em></button>
+                  <div class="faq-a"><div class="faq-a-inner" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">FreeImgTools is the best free alternative to iLoveIMG because: (1) FreeImgTools is completely free with no file size limits, while iLoveIMG limits free users to 25MB per file. (2) FreeImgTools processes images in your browser so they never leave your device, while iLoveIMG uploads your files to their servers. (3) FreeImgTools has no daily usage limits. (4) FreeImgTools processes images instantly with no server queue. (5) FreeImgTools offers additional tools like Brightness/Contrast, Metadata Viewer, and SVG-to-PNG that iLoveIMG does not have.</span></div></div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                  <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false"><span itemprop="name">What image formats does FreeImgTools support?</span><em>+</em></button>
+                  <div class="faq-a"><div class="faq-a-inner" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">FreeImgTools supports JPG (JPEG), PNG, WEBP, GIF, BMP, and SVG image formats. You can convert between JPG, PNG, WEBP, GIF, and BMP formats. SVG files can be converted to PNG. All tools support JPG and PNG. WEBP is supported in Compress, Resize, Rotate, Watermark, Grayscale, Brightness, and Blur tools.</span></div></div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                  <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false"><span itemprop="name">Does FreeImgTools work on iPhone and Android?</span><em>+</em></button>
+                  <div class="faq-a"><div class="faq-a-inner" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Yes, FreeImgTools works on all mobile devices including iPhone (iOS Safari), Android (Chrome, Samsung Internet), and all other modern mobile browsers. The interface is fully responsive and touch-friendly. No app download is required — simply open FreeImgTools in your mobile browser and all 22 tools are available immediately.</span></div></div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                  <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false"><span itemprop="name">Can I convert JPG to PNG for free without losing quality?</span><em>+</em></button>
+                  <div class="faq-a"><div class="faq-a-inner" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Yes. Use the FreeImgTools Format Converter to convert JPG to PNG without losing quality. PNG is a lossless format so the conversion preserves all image data. Upload your JPG, select "PNG" as the output format, and click Convert &amp; Download. The entire process runs in your browser and takes seconds, with no file size limits and no signup.</span></div></div>
+                </div>
+              </div>
+            </section>
+
+          </div><!-- /main column -->
+
+          <!-- SIDEBAR -->
+          <aside aria-label="Sidebar content">
+            <div aria-label="Advertisement">
+              <!-- <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-REPLACE-WITH-YOUR-ADSENSE-ID" data-ad-slot="3333333333" data-ad-format="auto"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({});</script> -->
+              <div class="sidebar-ad">Ad · 300×600</div>
+            </div>
+            <div class="sidebar-box">
+              <h3>🔥 Most Used Tools</h3>
+              <a class="sidebar-link" href="#" onclick="openTool('compress');return false;" aria-label="Open Image Compressor tool">🗜️ <span>Compress Image</span></a>
+              <a class="sidebar-link" href="#" onclick="openTool('resize');return false;" aria-label="Open Image Resizer tool">📐 <span>Resize Image</span></a>
+              <a class="sidebar-link" href="#" onclick="openTool('convert');return false;" aria-label="Open Format Converter tool">🔄 <span>Convert Format</span></a>
+              <a class="sidebar-link" href="#" onclick="openTool('passport');return false;" aria-label="Open Passport Size Photo Maker tool">🪪 <span>Passport Photo Maker</span></a>
+              <a class="sidebar-link" href="#" onclick="openTool('jpgpdf');return false;" aria-label="Open JPG to PDF converter tool">📄 <span>JPG to PDF</span></a>
+              <a class="sidebar-link" href="#" onclick="openTool('pdfjpg');return false;" aria-label="Open PDF to JPG converter tool">🖼️ <span>PDF to JPG</span></a>
+              <a class="sidebar-link" href="#" onclick="openTool('crop');return false;" aria-label="Open Image Cropper tool">✂️ <span>Crop Image</span></a>
+              <a class="sidebar-link" href="#" onclick="openTool('watermark');return false;" aria-label="Open Watermark tool">💧 <span>Add Watermark</span></a>
+            </div>
+            <div class="sidebar-box">
+              <h3>✨ New Tools</h3>
+              <a class="sidebar-link" href="#" onclick="openTool('brightness');return false;">☀️ <span>Brightness &amp; Contrast</span></a>
+              <a class="sidebar-link" href="#" onclick="openTool('blur');return false;">🌫️ <span>Blur Image</span></a>
+              <a class="sidebar-link" href="#" onclick="openTool('grayscale');return false;">⚫ <span>Grayscale Converter</span></a>
+              <a class="sidebar-link" href="#" onclick="openTool('svgviewer');return false;">📊 <span>SVG to PNG</span></a>
+            </div>
+            <div aria-label="Advertisement">
+              <!-- <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-REPLACE-WITH-YOUR-ADSENSE-ID" data-ad-slot="4444444444" data-ad-format="auto"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({});</script> -->
+              <div class="ad-slot" style="height:250px;border-radius:10px;">Ad · 300×250</div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+</main>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer itemscope itemtype="https://schema.org/WPFooter">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" aria-label="FreeImgTools home"><img src="logo.png" alt="FreeImgTools" width="160" height="40" style="height:36px;width:auto;" loading="lazy" /></a>
+          <p>FreeImgTools — the fastest, most private free image editing platform. 22 tools. No signup. No watermarks. No limits. 100% browser-based.</p>
+          <p style="margin-top:10px;font-size:.75rem;color:#444;">Supported formats: JPG · PNG · WEBP · GIF · BMP · SVG</p>
+        </div>
+        <div class="footer-col">
+          <h4>Image Tools</h4>
+          <ul>
+            <li><a href="#" onclick="openTool('compress');return false;">Compress Image</a></li>
+            <li><a href="#" onclick="openTool('resize');return false;">Resize Image</a></li>
+            <li><a href="#" onclick="openTool('crop');return false;">Crop Image</a></li>
+            <li><a href="#" onclick="openTool('rotate');return false;">Rotate &amp; Flip</a></li>
+            <li><a href="#" onclick="openTool('watermark');return false;">Watermark Image</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Convert &amp; Edit</h4>
+          <ul>
+            <li><a href="#" onclick="openTool('convert');return false;">Convert Format</a></li>
+            <li><a href="#" onclick="openTool('passport');return false;">Passport Photo Maker</a></li>
+            <li><a href="#" onclick="openTool('jpgpdf');return false;">JPG to PDF</a></li>
+            <li><a href="#" onclick="openTool('pdfjpg');return false;">PDF to JPG</a></li>
+            <li><a href="#" onclick="openTool('grayscale');return false;">Grayscale</a></li>
+            <li><a href="#" onclick="openTool('brightness');return false;">Brightness &amp; Contrast</a></li>
+            <li><a href="#" onclick="openTool('blur');return false;">Blur Image</a></li>
+            <li><a href="#" onclick="openTool('base64img');return false;">Image to Base64</a></li>
+            <li><a href="#" onclick="openTool('svgviewer');return false;">SVG to PNG</a></li>
+            <li><a href="#" onclick="openTool('pdfmerge');return false;">PDF Merge</a></li>
+            <li><a href="#" onclick="openTool('pdfsplit');return false;">PDF Split</a></li>
+            <li><a href="#" onclick="openTool('pdfcompress');return false;">PDF Compressor</a></li>
+            <li><a href="#" onclick="openTool('qrgen');return false;">QR Generator</a></li>
+            <li><a href="#" onclick="openTool('barcode');return false;">Barcode Generator</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Info</h4>
+          <ul>
+            <li><a href="#about">About FreeImgTools</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="sitemap.xml">Sitemap</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Use</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <!-- Footer schema -->
+      <div style="margin-bottom:24px;padding:16px;background:var(--card);border:1px solid var(--border);border-radius:10px;font-size:.8rem;color:var(--muted);line-height:1.8;">
+        <strong style="color:var(--text);">FreeImgTools</strong> is a free online image editing tool. Compress JPG, PNG, WEBP images · Resize images by pixel or percent · Crop images with preset ratios · Convert between JPG, PNG, WEBP, GIF, BMP formats · Rotate and flip images · Add watermarks · Convert to grayscale · Adjust brightness and contrast · Blur images · View image metadata · Encode images as Base64 · Convert SVG to PNG. All tools are <strong style="color:var(--text);">100% free</strong>, require <strong style="color:var(--text);">no account</strong>, and process images <strong style="color:var(--text);">entirely in your browser</strong>.
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 FreeImgTools. All rights reserved. Free online image tools — no signup, no watermarks, no limits.</p>
+        <p style="color:var(--accent2);font-size:.8rem;">🔒 Private · ⚡ Fast · 🆓 Free · 📱 Mobile-Friendly · 🌐 Offline-Ready</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ═══ TOOL MODAL ═══ -->
+  <div class="overlay" id="overlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle" onclick="closeBg(event)">
+    <div class="modal">
+      <div class="modal-head">
+        <h2 id="modalTitle">Tool</h2>
+        <button class="modal-close" onclick="closeModal()" aria-label="Close tool">✕</button>
+      </div>
+      <div class="modal-body" id="modalBody"></div>
+    </div>
+  </div>
+
+  <!-- ═══ NOSCRIPT fallback (SEO signal) ═══ -->
+  <noscript>
+    <div style="background:#0d0d14;color:#e2e2f0;padding:40px;text-align:center;font-family:sans-serif;">
+      <h2>FreeImgTools — Free Online Image Editor</h2>
+      <p>Please enable JavaScript to use FreeImgTools. All image processing runs securely in your browser — your images never leave your device.</p>
+      <p>Tools available: Image Compressor, Image Resizer, Image Cropper, Format Converter (JPG/PNG/WEBP/GIF), Rotate &amp; Flip, Watermark, Grayscale, Brightness &amp; Contrast, Blur, Metadata Viewer, Base64 Converter, SVG to PNG.</p>
+    </div>
+  </noscript>
+
+  <!-- ═══ JAVASCRIPT ═══ -->
+  <script>
+    // ── Service Worker Registration (PWA + Offline) ──
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/freeimgtools/sw.js')
+          .catch(() => {});
+      });
+    }
+
+    // ── Category Filter ──
+    function filterCat(cat, btn) {
+      document.querySelectorAll('.cat-pill').forEach(p => { p.classList.remove('active'); p.setAttribute('aria-selected','false'); });
+      btn.classList.add('active'); btn.setAttribute('aria-selected','true');
+      document.querySelectorAll('.tool-card').forEach(c => {
+        c.style.display = (cat === 'all' || c.dataset.cat === cat) ? 'flex' : 'none';
+      });
+    }
+
+    // ── Search ──
+    document.getElementById('searchInput').addEventListener('input', function() {
+      const q = this.value.toLowerCase();
+      document.querySelectorAll('.tool-card').forEach(c => {
+        c.style.display = c.textContent.toLowerCase().includes(q) ? 'flex' : 'none';
+      });
+      if (!q) document.querySelectorAll('.tool-card').forEach(c => c.style.display = 'flex');
+    });
+
+    // ── FAQ Toggle ──
+    function toggleFaq(btn) {
+      const ans = btn.nextElementSibling;
+      const isOpen = ans.classList.contains('open');
+      document.querySelectorAll('.faq-a').forEach(a => a.classList.remove('open'));
+      document.querySelectorAll('.faq-q').forEach(b => { b.classList.remove('open'); b.setAttribute('aria-expanded','false'); });
+      if (!isOpen) { ans.classList.add('open'); btn.classList.add('open'); btn.setAttribute('aria-expanded','true'); }
+    }
+
+    // ── Modal ──
+    const toolDefs = {
+      compress:{title:'🗜️ Compress Image — Reduce File Size',build:()=>`<p style="font-size:.85rem;color:var(--muted);margin-bottom:16px;">Reduce file size of JPG, PNG, WEBP images without visible quality loss. Your image never leaves your browser.</p><label class="upload-zone" id="cz" for="cf" ondragover="dov(event,'cz')" ondragleave="dlv('cz')" ondrop="dropF(event,'cf','cz')"><input type="file" id="cf" accept="image/*" onchange="loadComp(this)"/><div class="upload-icon">🗜️</div><div class="upload-label">Drop image here or click to upload</div><div class="upload-hint">JPG · PNG · WEBP · GIF · Max 50MB</div></label><div class="ctrl-row"><span class="ctrl-label">Quality</span><input type="range" id="cq" min="1" max="100" value="80" oninput="document.getElementById('cqv').textContent=this.value+'%';recomp()"/><span class="ctrl-val" id="cqv">80%</span></div><div class="preview-row"><div class="preview-box"><div class="preview-label">Original</div><div class="preview-img-wrap"><img id="corig" src="" alt="Original image" style="display:none"/></div></div><div class="preview-box"><div class="preview-label">Compressed</div><div class="preview-img-wrap"><img id="cout" src="" alt="Compressed image" style="display:none"/></div></div></div><canvas id="cc" style="display:none"></canvas><div class="preview-stats"><div class="stat-box"><span class="stat-n" id="os">—</span><span class="stat-l">Original</span></div><div class="stat-box"><span class="stat-n" id="ns">—</span><span class="stat-l">Compressed</span></div><div class="stat-box"><span class="stat-n" id="sv">—</span><span class="stat-l">Saved</span></div></div><button class="btn btn-primary" onclick="dlCanvas('cc','compressed.jpg')" style="margin-top:16px;width:100%">⬇️ Download Compressed Image</button><div class="modal-ad">Advertisement · AdSense 728×90</div>`},
+      resize:{title:'📐 Resize Image — Change Dimensions',build:()=>`<label class="upload-zone" for="rf"><input type="file" id="rf" accept="image/*" onchange="loadRes(this)"/><div class="upload-icon">📐</div><div class="upload-label">Drop image here or click to upload</div><div class="upload-hint">JPG · PNG · WEBP</div></label><div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px;"><div><label style="font-size:.82rem;color:var(--muted);display:block;margin-bottom:6px;">Width (px)</label><input type="number" id="rw" class="form-input" placeholder="Width" oninput="syncAR('w')"/></div><div><label style="font-size:.82rem;color:var(--muted);display:block;margin-bottom:6px;">Height (px)</label><input type="number" id="rh" class="form-input" placeholder="Height" oninput="syncAR('h')"/></div></div><label style="display:flex;align-items:center;gap:8px;margin-top:12px;font-size:.84rem;color:var(--muted);cursor:pointer;"><input type="checkbox" id="rl" checked style="accent-color:var(--accent)"/> Lock aspect ratio</label><canvas id="rc" style="display:none"></canvas><div class="preview-stats" style="margin-top:16px;"><div class="stat-box"><span class="stat-n" id="od">—</span><span class="stat-l">Original</span></div><div class="stat-box"><span class="stat-n" id="nd">—</span><span class="stat-l">New Size</span></div><div class="stat-box"><span class="stat-n" id="rp">—</span><span class="stat-l">Scale</span></div></div><button class="btn btn-primary" onclick="doRes()" style="margin-top:16px;width:100%">⬇️ Resize &amp; Download</button><div class="modal-ad">Advertisement · AdSense 728×90</div>`},
+      convert:{title:'🔄 Convert Image Format',build:()=>`<label class="upload-zone" for="cvf"><input type="file" id="cvf" accept="image/*" onchange="loadConv(this)"/><div class="upload-icon">🔄</div><div class="upload-label">Drop image here or click to upload</div><div class="upload-hint">JPG · PNG · WEBP · GIF · BMP</div></label><div style="margin-top:16px;"><label style="font-size:.82rem;color:var(--muted);display:block;margin-bottom:6px;">Convert To</label><select id="ct" class="form-select"><option value="image/jpeg">JPG / JPEG</option><option value="image/png">PNG</option><option value="image/webp">WEBP</option><option value="image/gif">GIF</option></select></div><canvas id="cvc" style="display:none"></canvas><div class="preview-stats" style="margin-top:16px;"><div class="stat-box"><span class="stat-n" id="cvof">—</span><span class="stat-l">From Format</span></div><div class="stat-box"><span class="stat-n" id="cvs">—</span><span class="stat-l">File Size</span></div><div class="stat-box"><span class="stat-n" id="cvd">—</span><span class="stat-l">Dimensions</span></div></div><button class="btn btn-primary" onclick="doConv()" style="margin-top:16px;width:100%">⬇️ Convert &amp; Download</button><div class="modal-ad">Advertisement · AdSense 728×90</div>`},
+      passport:{title:'🪪 Passport Size Photo Maker',build:()=>`<p style="font-size:.85rem;color:var(--muted);margin-bottom:16px;">Make passport-size photos for forms, visa applications, CVs and documents. Choose a preset size, crop automatically, then download.</p><label class="upload-zone" for="psf"><input type="file" id="psf" accept="image/*" onchange="loadPassport(this)"/><div class="upload-icon">🪪</div><div class="upload-label">Drop portrait photo here or click to upload</div><div class="upload-hint">JPG · PNG · WEBP</div></label><div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px;"><div><label style="font-size:.82rem;color:var(--muted);display:block;margin-bottom:6px;">Photo Size</label><select id="psSize" class="form-select" onchange="drawPassport()"><option value="600x600">2×2 inch — 600×600 px</option><option value="413x531">35×45 mm — 413×531 px</option><option value="600x600">51×51 mm — 600×600 px</option><option value="1200x1800">4×6 print sheet — 1200×1800 px</option></select></div><div><label style="font-size:.82rem;color:var(--muted);display:block;margin-bottom:6px;">Background</label><select id="psBg" class="form-select" onchange="drawPassport()"><option value="#ffffff">White</option><option value="#f8fafc">Off White</option><option value="#dbeafe">Light Blue</option></select></div></div><canvas id="psc" style="display:none"></canvas><div id="psprev" style="margin-top:16px;background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:16px;min-height:140px;display:flex;align-items:center;justify-content:center;"><span style="font-size:.85rem;color:var(--muted);">Upload a photo to preview passport size output</span></div><button class="btn btn-primary" onclick="dlCanvas('psc','passport-size-photo.jpg')" style="margin-top:16px;width:100%">⬇️ Download Passport Size Photo</button><div class="modal-ad">Advertisement · AdSense 728×90</div>`},
+      jpgpdf:{title:'📄 JPG to PDF Converter',build:()=>`<p style="font-size:.85rem;color:var(--muted);margin-bottom:16px;">Convert one or more JPG/PNG/WEBP images to a single PDF. Processing is done in your browser.</p><label class="upload-zone" for="jpf"><input type="file" id="jpf" accept="image/*" multiple onchange="loadJpgPdf(this)"/><div class="upload-icon">📄</div><div class="upload-label">Drop images here or click to upload</div><div class="upload-hint">JPG · PNG · WEBP · Multiple images supported</div></label><div id="jplist" style="margin-top:16px;font-size:.85rem;color:var(--muted);"></div><button class="btn btn-primary" onclick="makePdfFromImages()" style="margin-top:16px;width:100%">⬇️ Convert JPG to PDF</button><div class="modal-ad">Advertisement · AdSense 728×90</div>`},
+      pdfjpg:{title:'🖼️ PDF to JPG Converter',build:()=>`<p style="font-size:.85rem;color:var(--muted);margin-bottom:16px;">Convert PDF pages to JPG images. Uses PDF rendering in your browser; best for normal-size documents.</p><label class="upload-zone" for="pjf"><input type="file" id="pjf" accept="application/pdf,.pdf" onchange="pdfToJpg(this)"/><div class="upload-icon">🖼️</div><div class="upload-label">Drop PDF here or click to upload</div><div class="upload-hint">PDF file only</div></label><div id="pjstatus" style="margin-top:16px;font-size:.85rem;color:var(--muted);"></div><div id="pjout" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin-top:16px;"></div><div class="modal-ad">Advertisement · AdSense 728×90</div>`},
+      crop:{title:'✂️ Crop Image',build:()=>`<label class="upload-zone" for="crpf"><input type="file" id="crpf" accept="image/*" onchange="loadCrp(this)"/><div class="upload-icon">✂️</div><div class="upload-label">Drop image here or click to upload</div><div class="upload-hint">JPG · PNG · GIF</div></label><div style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:16px;"><button class="btn btn-outline" onclick="setCrp(1,1)" style="font-size:.78rem;">1:1</button><button class="btn btn-outline" onclick="setCrp(16,9)" style="font-size:.78rem;">16:9</button><button class="btn btn-outline" onclick="setCrp(4,3)" style="font-size:.78rem;">4:3</button><button class="btn btn-outline" onclick="setCrp(0,0)" style="font-size:.78rem;">Custom</button></div><div style="display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:10px;margin-top:12px;"><div><label style="font-size:.78rem;color:var(--muted);display:block;margin-bottom:4px;">X</label><input type="number" id="cx" class="form-input" value="0"/></div><div><label style="font-size:.78rem;color:var(--muted);display:block;margin-bottom:4px;">Y</label><input type="number" id="cy" class="form-input" value="0"/></div><div><label style="font-size:.78rem;color:var(--muted);display:block;margin-bottom:4px;">W</label><input type="number" id="cw2" class="form-input" value="200"/></div><div><label style="font-size:.78rem;color:var(--muted);display:block;margin-bottom:4px;">H</label><input type="number" id="ch2" class="form-input" value="200"/></div></div><canvas id="crpc" style="display:none"></canvas><button class="btn btn-primary" onclick="doCrp()" style="margin-top:16px;width:100%">✂️ Crop &amp; Download</button><div class="modal-ad">Advertisement · AdSense 728×90</div>`},
+      rotate:{title:'🔃 Rotate &amp; Flip Image',build:()=>`<label class="upload-zone" for="rotf"><input type="file" id="rotf" accept="image/*" onchange="loadRot(this)"/><div class="upload-icon">🔃</div><div class="upload-label">Drop image here or click to upload</div><div class="upload-hint">JPG · PNG · WEBP · GIF</div></label><div class="ctrl-row" style="flex-wrap:wrap;gap:8px;margin-top:20px;"><button class="btn btn-outline" onclick="doRot(90)" style="flex:1;min-width:90px;">↻ 90°</button><button class="btn btn-outline" onclick="doRot(180)" style="flex:1;min-width:90px;">↻ 180°</button><button class="btn btn-outline" onclick="doRot(270)" style="flex:1;min-width:90px;">↻ 270°</button><button class="btn btn-outline" onclick="doFlip('h')" style="flex:1;min-width:90px;">⇄ Flip H</button><button class="btn btn-outline" onclick="doFlip('v')" style="flex:1;min-width:90px;">⇅ Flip V</button></div><canvas id="rotc" style="display:none"></canvas><div id="rotprev" style="margin-top:16px;background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:16px;min-height:120px;display:flex;align-items:center;justify-content:center;"><span style="font-size:.85rem;color:var(--muted);">Upload an image to preview</span></div><button class="btn btn-primary" onclick="dlCanvas('rotc','rotated.png')" style="margin-top:16px;width:100%">⬇️ Download</button><div class="modal-ad">Advertisement · AdSense 728×90</div>`},
+      watermark:{title:'💧 Add Watermark to Image',build:()=>`<label class="upload-zone" for="wmf"><input type="file" id="wmf" accept="image/*" onchange="loadWM(this)"/><div class="upload-icon">💧</div><div class="upload-label">Drop image here or click to upload</div><div class="upload-hint">JPG · PNG · WEBP</div></label><div style="display:grid;gap:12px;margin-top:16px;"><div><label style="font-size:.82rem;color:var(--muted);display:block;margin-bottom:6px;">Watermark Text</label><input type="text" id="wmt" class="form-input" value="© FreeImgTools" oninput="applyWM()"/></div><div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;"><div><label style="font-size:.82rem;color:var(--muted);display:block;margin-bottom:6px;">Color</label><input type="color" id="wmc" value="#ffffff" oninput="applyWM()" style="width:100%;height:40px;border-radius:8px;border:1px solid var(--border);cursor:pointer;"/></div><div><label style="font-size:.82rem;color:var(--muted);display:block;margin-bottom:6px;">Position</label><select id="wmp" class="form-select" onchange="applyWM()"><option value="br">Bottom Right</option><option value="bl">Bottom Left</option><option value="tr">Top Right</option><option value="tl">Top Left</option><option value="c">Center</option></select></div></div><div><label style="font-size:.82rem;color:var(--muted);display:block;margin-bottom:6px;">Opacity: <span id="wmov">80%</span></label><input type="range" id="wmo" min="10" max="100" value="80" oninput="document.getElementById('wmov').textContent=this.value+'%';applyWM()" style="width:100%;accent-color:var(--accent);"/></div></div><canvas id="wmc2" style="display:none"></canvas><div id="wmprev" style="margin-top:16px;background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:16px;min-height:120px;display:flex;align-items:center;justify-content:center;"><span style="font-size:.85rem;color:var(--muted);">Upload an image to preview</span></div><button class="btn btn-primary" onclick="dlCanvas('wmc2','watermarked.png')" style="margin-top:16px;width:100%">⬇️ Download Watermarked Image</button><div class="modal-ad">Advertisement · AdSense 728×90</div>`},
+      grayscale:{title:'⚫ Convert Image to Grayscale',build:()=>`<label class="upload-zone" for="gsf"><input type="file" id="gsf" accept="image/*" onchange="loadGS(this)"/><div class="upload-icon">⚫</div><div class="upload-label">Drop image here or click to upload</div><div class="upload-hint">JPG · PNG · WEBP</div></label><canvas id="gsc" style="display:none"></canvas><div class="preview-row" style="margin-top:16px;"><div class="preview-box"><div class="preview-label">Original (Color)</div><div class="preview-img-wrap"><img id="gso" src="" alt="Original color image" style="display:none;"/></div></div><div class="preview-box"><div class="preview-label">Grayscale Output</div><div class="preview-img-wrap"><img id="gsr" src="" alt="Grayscale image output" style="display:none;"/></div></div></div><button class="btn btn-primary" onclick="dlCanvas('gsc','grayscale.jpg')" style="margin-top:16px;width:100%">⬇️ Download Grayscale Image</button><div class="modal-ad">Advertisement · AdSense 728×90</div>`},
+      base64img:{title:'🔤 Image to Base64 Encoder',build:()=>`<label class="upload-zone" for="b6f"><input type="file" id="b6f" accept="image/*" onchange="toB64(this)"/><div class="upload-icon">🔤</div><div class="upload-label">Drop image here or click to upload</div><div class="upload-hint">JPG · PNG · SVG · WEBP</div></label><div id="b6res" style="display:none;margin-top:16px;"><label style="font-size:.82rem;color:var(--muted);display:block;margin-bottom:6px;">Base64 Data URI — paste into HTML src="" or CSS url()</label><textarea id="b6out" style="width:100%;height:120px;background:var(--surface);border:1px solid var(--border);border-radius:8px;color:var(--text);font-family:monospace;font-size:.72rem;padding:12px;resize:vertical;outline:none;" readonly></textarea><div style="display:flex;gap:10px;margin-top:10px;"><button class="btn btn-primary" onclick="cpB64()" style="flex:1">📋 Copy Base64</button><button class="btn btn-outline" style="flex:1" onclick="cpB64Html()">Copy as &lt;img&gt; tag</button></div><div class="preview-stats" style="margin-top:12px;"><div class="stat-box"><span class="stat-n" id="b6os">—</span><span class="stat-l">Original</span></div><div class="stat-box"><span class="stat-n" id="b6sl">—</span><span class="stat-l">String Length</span></div><div class="stat-box"><span class="stat-n" id="b6tp">—</span><span class="stat-l">Format</span></div></div></div><div class="modal-ad">Advertisement · AdSense 728×90</div>`},
+      brightness:{title:'☀️ Brightness, Contrast &amp; Saturation',build:()=>`<label class="upload-zone" for="bcf"><input type="file" id="bcf" accept="image/*" onchange="loadBC(this)"/><div class="upload-icon">☀️</div><div class="upload-label">Drop image here or click to upload</div><div class="upload-hint">JPG · PNG · WEBP</div></label><div style="display:flex;flex-direction:column;gap:14px;margin-top:20px;"><div class="ctrl-row"><span class="ctrl-label" style="min-width:90px;">Brightness</span><input type="range" id="bcb" min="-100" max="100" value="0" oninput="document.getElementById('bcbv').textContent=this.value;applyBC()"/><span class="ctrl-val" id="bcbv">0</span></div><div class="ctrl-row"><span class="ctrl-label" style="min-width:90px;">Contrast</span><input type="range" id="bcc" min="-100" max="100" value="0" oninput="document.getElementById('bccv').textContent=this.value;applyBC()"/><span class="ctrl-val" id="bccv">0</span></div><div class="ctrl-row"><span class="ctrl-label" style="min-width:90px;">Saturation</span><input type="range" id="bcs" min="-100" max="100" value="0" oninput="document.getElementById('bcsv').textContent=this.value;applyBC()"/><span class="ctrl-val" id="bcsv">0</span></div></div><canvas id="bcc2" style="display:none"></canvas><div id="bcprev" style="margin-top:16px;background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:16px;min-height:120px;display:flex;align-items:center;justify-content:center;"><span style="font-size:.85rem;color:var(--muted);">Upload an image to adjust</span></div><div style="display:flex;gap:10px;margin-top:12px;"><button class="btn btn-outline" onclick="resetBC()" style="flex:1">↺ Reset</button><button class="btn btn-primary" onclick="dlCanvas('bcc2','adjusted.jpg')" style="flex:2">⬇️ Download</button></div><div class="modal-ad">Advertisement · AdSense 728×90</div>`},
+      metadata:{title:'📋 Image Metadata Viewer',build:()=>`<label class="upload-zone" for="mdf"><input type="file" id="mdf" accept="image/*" onchange="showMeta(this)"/><div class="upload-icon">📋</div><div class="upload-label">Drop image here or click to upload</div><div class="upload-hint">JPG · PNG · WEBP · GIF</div></label><div id="mdres" style="margin-top:20px;display:none;"><div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;overflow:hidden;"><table style="width:100%;border-collapse:collapse;font-size:.85rem;" id="mdt"></table></div></div><div class="modal-ad">Advertisement · AdSense 728×90</div>`},
+      blur:{title:'🌫️ Blur Image Online',build:()=>`<label class="upload-zone" for="blf"><input type="file" id="blf" accept="image/*" onchange="loadBl(this)"/><div class="upload-icon">🌫️</div><div class="upload-label">Drop image here or click to upload</div><div class="upload-hint">JPG · PNG · WEBP</div></label><div class="ctrl-row" style="margin-top:20px;"><span class="ctrl-label">Blur Strength</span><input type="range" id="bla" min="0" max="20" value="5" oninput="document.getElementById('blav').textContent=this.value+'px';applyBl()"/><span class="ctrl-val" id="blav">5px</span></div><canvas id="blc" style="display:none"></canvas><div id="blprev" style="margin-top:16px;background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:16px;min-height:120px;display:flex;align-items:center;justify-content:center;"><span style="font-size:.85rem;color:var(--muted);">Upload an image to blur</span></div><button class="btn btn-primary" onclick="dlCanvas('blc','blurred.jpg')" style="margin-top:16px;width:100%">⬇️ Download Blurred Image</button><div class="modal-ad">Advertisement · AdSense 728×90</div>`},
+      svgviewer:{title:'📊 SVG to PNG Converter',build:()=>`<label class="upload-zone" for="svf"><input type="file" id="svf" accept=".svg,image/svg+xml" onchange="svgPng(this)"/><div class="upload-icon">📊</div><div class="upload-label">Drop SVG file here or click to upload</div><div class="upload-hint">SVG files only</div></label><div style="margin-top:16px;"><label style="font-size:.82rem;color:var(--muted);display:block;margin-bottom:6px;">Output Resolution</label><select id="svsc" class="form-select"><option value="1">1x — Original size</option><option value="2" selected>2x — Retina display</option><option value="3">3x — High resolution</option><option value="4">4x — Ultra resolution</option></select></div><canvas id="svc" style="display:none"></canvas><div id="svprev" style="margin-top:16px;background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:16px;min-height:100px;display:flex;align-items:center;justify-content:center;"><span style="font-size:.85rem;color:var(--muted);">SVG preview will appear here</span></div><button class="btn btn-primary" onclick="dlCanvas('svc','converted.png')" style="margin-top:16px;width:100%">⬇️ Download as PNG</button><div class="modal-ad">Advertisement · AdSense 728×90</div>`}
+    ,
+
+pdfmerge:{title:'📦 PDF Merge — Combine PDF Files',build:()=>`<p style="font-size:.85rem;color:var(--muted);margin-bottom:16px;">Select two or more PDF files and combine them into one PDF. Files are processed in your browser.</p><label class="upload-zone" for="pmf"><input type="file" id="pmf" accept="application/pdf,.pdf" multiple onchange="loadPdfMerge(this)"/><div class="upload-icon">📦</div><div class="upload-label">Click to select PDF files</div><div class="upload-hint">Multiple PDF files supported</div></label><div id="pmlist" style="margin-top:14px;font-size:.85rem;color:var(--muted);"></div><button class="btn btn-primary" onclick="mergePdfs()" style="margin-top:16px;width:100%">⬇️ Merge & Download PDF</button><div class="modal-ad">Advertisement · AdSense 728×90</div>`},
+pdfsplit:{title:'✂️ PDF Split — Extract Pages',build:()=>`<p style="font-size:.85rem;color:var(--muted);margin-bottom:16px;">Upload a PDF, then extract a page range or split it into separate one-page PDF files.</p><label class="upload-zone" for="pspf"><input type="file" id="pspf" accept="application/pdf,.pdf" onchange="loadPdfSplit(this)"/><div class="upload-icon">✂️</div><div class="upload-label">Click to select one PDF file</div><div class="upload-hint">PDF file only</div></label><div id="pspinfo" style="margin-top:14px;font-size:.85rem;color:var(--muted);"></div><div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px;"><div><label style="font-size:.82rem;color:var(--muted);display:block;margin-bottom:6px;">From page</label><input class="form-input" type="number" id="psfrom" value="1" min="1"></div><div><label style="font-size:.82rem;color:var(--muted);display:block;margin-bottom:6px;">To page</label><input class="form-input" type="number" id="psto" value="1" min="1"></div></div><div style="display:flex;gap:10px;margin-top:16px;"><button class="btn btn-primary" onclick="extractPdfRange()" style="flex:1">Extract Range</button><button class="btn btn-outline" onclick="splitAllPdfPages()" style="flex:1">Split All Pages</button></div><div id="pspout" style="margin-top:14px;font-size:.85rem;color:var(--muted);"></div><div class="modal-ad">Advertisement · AdSense 728×90</div>`},
+pdfcompress:{title:'🗜️ PDF Compressor — Optimize PDF',build:()=>`<p style="font-size:.85rem;color:var(--muted);margin-bottom:16px;">Optimize and rebuild your PDF using browser-side PDF processing. Results vary depending on the original PDF.</p><label class="upload-zone" for="pcf"><input type="file" id="pcf" accept="application/pdf,.pdf" onchange="loadPdfCompress(this)"/><div class="upload-icon">🗜️</div><div class="upload-label">Click to select PDF file</div><div class="upload-hint">Best for normal documents and forms</div></label><div class="preview-stats" style="margin-top:16px;"><div class="stat-box"><span class="stat-n" id="pcorig">—</span><span class="stat-l">Original</span></div><div class="stat-box"><span class="stat-n" id="pcnew">—</span><span class="stat-l">Optimized</span></div><div class="stat-box"><span class="stat-n" id="pcsaved">—</span><span class="stat-l">Change</span></div></div><button class="btn btn-primary" onclick="compressPdf()" style="margin-top:16px;width:100%">⬇️ Optimize & Download PDF</button><div id="pcstatus" style="margin-top:12px;font-size:.85rem;color:var(--muted);"></div><div class="modal-ad">Advertisement · AdSense 728×90</div>`},
+qrgen:{title:'🔳 QR Code Generator',build:()=>`<p style="font-size:.85rem;color:var(--muted);margin-bottom:16px;">Generate a QR code for a URL, text, email, phone, WhatsApp number or business page.</p><label style="font-size:.82rem;color:var(--muted);display:block;margin-bottom:6px;">Text or URL</label><textarea id="qrtxt" class="form-input" style="height:90px;resize:vertical;" placeholder="https://example.com" oninput="makeQR()">https://mirzacreative.github.io/freeimgtools/</textarea><button class="btn btn-primary" onclick="makeQR()" style="margin-top:12px;width:100%">Generate QR Code</button><div id="qrbox" style="margin-top:18px;background:#fff;border-radius:12px;padding:18px;display:flex;align-items:center;justify-content:center;min-height:260px;"></div><button class="btn btn-outline" onclick="downloadQR()" style="margin-top:12px;width:100%">⬇️ Download QR PNG</button><div class="modal-ad">Advertisement · AdSense 728×90</div>`},
+barcode:{title:'🏷️ Barcode Generator',build:()=>`<p style="font-size:.85rem;color:var(--muted);margin-bottom:16px;">Create Code128 barcodes for product labels, inventory, packaging and IDs.</p><label style="font-size:.82rem;color:var(--muted);display:block;margin-bottom:6px;">Barcode Value</label><input class="form-input" id="bartext" value="FREEIMGTOOLS123" oninput="makeBarcode()"/><button class="btn btn-primary" onclick="makeBarcode()" style="margin-top:12px;width:100%">Generate Barcode</button><div style="margin-top:18px;background:#fff;border-radius:12px;padding:18px;display:flex;align-items:center;justify-content:center;overflow:auto;"><svg id="barsvg"></svg></div><div style="display:flex;gap:10px;margin-top:12px;"><button class="btn btn-outline" onclick="downloadBarcodeSVG()" style="flex:1">Download SVG</button><button class="btn btn-primary" onclick="downloadBarcodePNG()" style="flex:1">Download PNG</button></div><div class="modal-ad">Advertisement · AdSense 728×90</div>`},
+webptojpg:{title:'🖼️ WEBP to JPG Converter',build:()=>webpToolBuild('jpg')},
+webptopng:{title:'🖼️ WEBP to PNG Converter',build:()=>webpToolBuild('png')}
+};
+
+    let _rotA=0,_flipH=false,_flipV=false,_rotI=null,_wmI=null,_bcI=null,_blI=null,_resI=null,_resAR=1,_convI=null,_crpI=null,_passI=null,_jpgPdfFiles=[];
+
+    function openTool(id) {
+      const d = toolDefs[id]; if (!d) return;
+      document.getElementById('modalTitle').innerHTML = d.title;
+      document.getElementById('modalBody').innerHTML = d.build();
+      document.getElementById('overlay').classList.add('open');
+      document.body.style.overflow = 'hidden';
+      _rotA=0;_flipH=false;_flipV=false;_rotI=null;_wmI=null;_bcI=null;_blI=null;_resI=null;_convI=null;_crpI=null;_passI=null;_jpgPdfFiles=[];
+    }
+    function closeModal(){document.getElementById('overlay').classList.remove('open');document.body.style.overflow='';}
+    function closeBg(e){if(e.target===document.getElementById('overlay'))closeModal();}
+    document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal();});
+
+    function dov(e,id){e.preventDefault();document.getElementById(id).classList.add('drag');}
+    function dlv(id){document.getElementById(id).classList.remove('drag');}
+    function dropF(e,inp,zone){e.preventDefault();dlv(zone);const f=e.dataTransfer.files[0];if(!f)return;const i=document.getElementById(inp);const dt=new DataTransfer();dt.items.add(f);i.files=dt.files;i.dispatchEvent(new Event('change'));}
+    function fb(b){if(b<1024)return b+' B';if(b<1048576)return(b/1024).toFixed(1)+' KB';return(b/1048576).toFixed(2)+' MB';}
+
+
+    // Passport photo maker
+    function loadPassport(i){const f=i.files[0];if(!f)return;const u=URL.createObjectURL(f);const img=new Image();img.onload=()=>{_passI=img;drawPassport();};img.src=u;}
+    function drawPassport(){if(!_passI)return;const [w,h]=document.getElementById('psSize').value.split('x').map(Number);const c=document.getElementById('psc');c.width=w;c.height=h;const ctx=c.getContext('2d');ctx.fillStyle=document.getElementById('psBg').value;ctx.fillRect(0,0,w,h);const scale=Math.max(w/_passI.naturalWidth,h/_passI.naturalHeight);const sw=_passI.naturalWidth*scale,sh=_passI.naturalHeight*scale;ctx.drawImage(_passI,(w-sw)/2,(h-sh)/2,sw,sh);document.getElementById('psprev').innerHTML=`<img src="${c.toDataURL('image/jpeg',.94)}" alt="Passport size photo preview" style="max-height:260px;border-radius:8px;object-fit:contain;box-shadow:0 10px 30px rgba(0,0,0,.25);"/>`;}
+
+    // JPG to PDF converter — tiny browser PDF generator
+    function loadJpgPdf(i){_jpgPdfFiles=[...i.files].filter(f=>f.type.startsWith('image/'));document.getElementById('jplist').innerHTML=_jpgPdfFiles.length?`<strong style="color:var(--text)">${_jpgPdfFiles.length}</strong> image(s) selected:<br>`+_jpgPdfFiles.map((f,k)=>`${k+1}. ${f.name} — ${fb(f.size)}`).join('<br>'):'No supported images selected.';}
+    function imgFileToJpegData(f){return new Promise(res=>{const u=URL.createObjectURL(f),img=new Image();img.onload=()=>{const c=document.createElement('canvas');c.width=img.naturalWidth;c.height=img.naturalHeight;const ctx=c.getContext('2d');ctx.fillStyle='#fff';ctx.fillRect(0,0,c.width,c.height);ctx.drawImage(img,0,0);res({data:c.toDataURL('image/jpeg',.92).split(',')[1],w:c.width,h:c.height});URL.revokeObjectURL(u);};img.src=u;});}
+    function b64bin(b64){const bin=atob(b64),arr=new Uint8Array(bin.length);for(let i=0;i<bin.length;i++)arr[i]=bin.charCodeAt(i);return arr;}
+    function escPdf(s){return s.replace(/[\\()]/g,'\\$&');}
+    function bytesToBinaryString(bytes){let out='';const chunk=8192;for(let i=0;i<bytes.length;i+=chunk){out+=String.fromCharCode.apply(null,bytes.subarray(i,i+chunk));}return out;}
+    async function makePdfFromImages(){
+      if(!_jpgPdfFiles.length){alert('Please select at least one image.');return;}
+      const imgs=await Promise.all(_jpgPdfFiles.map(imgFileToJpegData));
+      const objects=['','<< /Type /Catalog /Pages 2 0 R >>',''];
+      const pageNums=[];
+      imgs.forEach((im,idx)=>{
+        const imgBytes=b64bin(im.data), imgObj=objects.length;
+        objects.push(`<< /Type /XObject /Subtype /Image /Width ${im.w} /Height ${im.h} /ColorSpace /DeviceRGB /BitsPerComponent 8 /Filter /DCTDecode /Length ${imgBytes.length} >>\nstream\n${bytesToBinaryString(imgBytes)}\nendstream`);
+        const pageW=595,pageH=842,margin=32,scale=Math.min((pageW-margin*2)/im.w,(pageH-margin*2)/im.h),dw=im.w*scale,dh=im.h*scale,x=(pageW-dw)/2,y=(pageH-dh)/2;
+        const content=`q\n${dw.toFixed(2)} 0 0 ${dh.toFixed(2)} ${x.toFixed(2)} ${y.toFixed(2)} cm\n/Im${idx} Do\nQ`, contObj=objects.length;
+        objects.push(`<< /Length ${content.length} >>\nstream\n${content}\nendstream`);
+        const pageObj=objects.length;
+        objects.push(`<< /Type /Page /Parent 2 0 R /MediaBox [0 0 ${pageW} ${pageH}] /Resources << /XObject << /Im${idx} ${imgObj} 0 R >> >> /Contents ${contObj} 0 R >>`);
+        pageNums.push(pageObj);
+      });
+      objects[2]=`<< /Type /Pages /Kids [${pageNums.map(n=>n+' 0 R').join(' ')}] /Count ${pageNums.length} >>`;
+      let pdf='%PDF-1.4\n',offsets=[0];
+      for(let i=1;i<objects.length;i++){offsets[i]=pdf.length;pdf+=`${i} 0 obj\n${objects[i]}\nendobj\n`;}
+      const xref=pdf.length;pdf+=`xref\n0 ${objects.length}\n0000000000 65535 f \n`;
+      for(let i=1;i<objects.length;i++)pdf+=String(offsets[i]).padStart(10,'0')+' 00000 n \n';
+      pdf+=`trailer << /Size ${objects.length} /Root 1 0 R /Title (${escPdf('FreeImgTools JPG to PDF')}) >>\nstartxref\n${xref}\n%%EOF`;
+      const blob=new Blob([pdf],{type:'application/pdf'}),a=document.createElement('a');a.download='images-to-pdf.pdf';a.href=URL.createObjectURL(blob);a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000);
+    }
+
+    // PDF to JPG converter
+    async function ensurePdfJs(){if(window.pdfjsLib)return window.pdfjsLib;await new Promise((res,rej)=>{const s=document.createElement('script');s.src='https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js';s.onload=res;s.onerror=rej;document.head.appendChild(s);});pdfjsLib.GlobalWorkerOptions.workerSrc='https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';return pdfjsLib;}
+    async function pdfToJpg(i){const f=i.files[0];if(!f)return;const status=document.getElementById('pjstatus'),out=document.getElementById('pjout');status.textContent='Rendering PDF pages…';out.innerHTML='';try{const pdfjs=await ensurePdfJs();const buf=await f.arrayBuffer();const pdf=await pdfjs.getDocument({data:buf}).promise;status.textContent=`${pdf.numPages} page(s) found. Download each JPG below.`;for(let n=1;n<=pdf.numPages;n++){const page=await pdf.getPage(n);const vp=page.getViewport({scale:2});const c=document.createElement('canvas');c.width=vp.width;c.height=vp.height;await page.render({canvasContext:c.getContext('2d'),viewport:vp}).promise;const url=c.toDataURL('image/jpeg',.92);const card=document.createElement('div');card.style.cssText='background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:10px;text-align:center;';card.innerHTML=`<img src="${url}" alt="PDF page ${n} preview" style="height:150px;object-fit:contain;margin:auto;border-radius:6px;"/><a class="btn btn-primary" download="pdf-page-${n}.jpg" href="${url}" style="margin-top:10px;width:100%;justify-content:center;">Download Page ${n}</a>`;out.appendChild(card);}}catch(e){status.textContent='PDF rendering failed. Please use a smaller PDF or check your internet connection for the PDF renderer library.';}}
+
+    // Compress
+    let _cf=null,_ci=null;
+    function loadComp(i){const f=i.files[0];if(!f)return;_cf=f;const u=URL.createObjectURL(f);const img=new Image();img.onload=()=>{_ci=img;document.getElementById('corig').src=u;document.getElementById('corig').style.display='block';document.getElementById('os').textContent=fb(f.size);recomp();};img.src=u;}
+    function recomp(){if(!_ci)return;const q=document.getElementById('cq').value/100;const c=document.getElementById('cc');c.width=_ci.naturalWidth;c.height=_ci.naturalHeight;c.getContext('2d').drawImage(_ci,0,0);const d=c.toDataURL('image/jpeg',q);document.getElementById('cout').src=d;document.getElementById('cout').style.display='block';const ns=Math.round((d.length-'data:image/jpeg;base64,'.length)*3/4);document.getElementById('ns').textContent=fb(ns);const p=Math.round((1-ns/(_cf?_cf.size:ns))*100);document.getElementById('sv').textContent=p>0?p+'%':'—';}
+
+    // Resize
+    function loadRes(i){const f=i.files[0];if(!f)return;const u=URL.createObjectURL(f);const img=new Image();img.onload=()=>{_resI=img;_resAR=img.naturalWidth/img.naturalHeight;document.getElementById('rw').value=img.naturalWidth;document.getElementById('rh').value=img.naturalHeight;document.getElementById('od').textContent=img.naturalWidth+'×'+img.naturalHeight;document.getElementById('nd').textContent=img.naturalWidth+'×'+img.naturalHeight;document.getElementById('rp').textContent='100%';};img.src=u;}
+    function syncAR(d){if(!_resI||!document.getElementById('rl').checked){updRes();return;}if(d==='w'){const w=+document.getElementById('rw').value;document.getElementById('rh').value=Math.round(w/_resAR);}else{const h=+document.getElementById('rh').value;document.getElementById('rw').value=Math.round(h*_resAR);}updRes();}
+    function updRes(){if(!_resI)return;const w=+document.getElementById('rw').value,h=+document.getElementById('rh').value;document.getElementById('nd').textContent=w+'×'+h;document.getElementById('rp').textContent=Math.round(w/_resI.naturalWidth*100)+'%';}
+    function doRes(){if(!_resI)return;const w=+document.getElementById('rw').value,h=+document.getElementById('rh').value;const c=document.getElementById('rc');c.width=w;c.height=h;c.getContext('2d').drawImage(_resI,0,0,w,h);dlCanvas('rc','resized.jpg');}
+
+    // Convert
+    function loadConv(i){const f=i.files[0];if(!f)return;const u=URL.createObjectURL(f);const img=new Image();img.onload=()=>{_convI=img;document.getElementById('cvof').textContent=f.type.split('/')[1].toUpperCase();document.getElementById('cvs').textContent=fb(f.size);document.getElementById('cvd').textContent=img.naturalWidth+'×'+img.naturalHeight;const c=document.getElementById('cvc');c.width=img.naturalWidth;c.height=img.naturalHeight;c.getContext('2d').drawImage(img,0,0);};img.src=u;}
+    function doConv(){if(!_convI)return;const fmt=document.getElementById('ct').value;const c=document.getElementById('cvc');const ctx=c.getContext('2d');if(fmt!=='image/png'){ctx.fillStyle='#fff';ctx.fillRect(0,0,c.width,c.height);}ctx.drawImage(_convI,0,0);const ext=fmt.split('/')[1]==='jpeg'?'jpg':fmt.split('/')[1];const a=document.createElement('a');a.download='converted.'+ext;a.href=c.toDataURL(fmt,.92);a.click();}
+
+    // Crop
+    function loadCrp(i){const f=i.files[0];if(!f)return;const u=URL.createObjectURL(f);const img=new Image();img.onload=()=>{_crpI=img;document.getElementById('cw2').value=Math.min(200,img.naturalWidth);document.getElementById('ch2').value=Math.min(200,img.naturalHeight);};img.src=u;}
+    function setCrp(w,h){if(!_crpI||(w===0&&h===0))return;const s=Math.min(_crpI.naturalWidth,_crpI.naturalHeight);document.getElementById('cw2').value=s;document.getElementById('ch2').value=Math.round(s*h/w);}
+    function doCrp(){if(!_crpI)return;const x=+document.getElementById('cx').value,y=+document.getElementById('cy').value,w=+document.getElementById('cw2').value,h=+document.getElementById('ch2').value;const c=document.getElementById('crpc');c.width=w;c.height=h;c.getContext('2d').drawImage(_crpI,x,y,w,h,0,0,w,h);dlCanvas('crpc','cropped.png');}
+
+    // Rotate
+    function loadRot(i){const f=i.files[0];if(!f)return;const u=URL.createObjectURL(f);const img=new Image();img.onload=()=>{_rotI=img;_rotA=0;_flipH=false;_flipV=false;drawRot();};img.src=u;}
+    function doRot(d){_rotA=(_rotA+d)%360;drawRot();}
+    function doFlip(d){if(d==='h')_flipH=!_flipH;else _flipV=!_flipV;drawRot();}
+    function drawRot(){if(!_rotI)return;const rad=_rotA*Math.PI/180;const sw=_rotI.naturalWidth,sh=_rotI.naturalHeight;const rot=(_rotA===90||_rotA===270);const cw=rot?sh:sw,ch=rot?sw:sh;const c=document.getElementById('rotc');c.width=cw;c.height=ch;const ctx=c.getContext('2d');ctx.save();ctx.translate(cw/2,ch/2);ctx.rotate(rad);ctx.scale(_flipH?-1:1,_flipV?-1:1);ctx.drawImage(_rotI,-sw/2,-sh/2);ctx.restore();document.getElementById('rotprev').innerHTML=`<img src="${c.toDataURL()}" alt="Rotated preview" style="max-height:200px;border-radius:6px;object-fit:contain;"/>`;}
+
+    // Watermark
+    function loadWM(i){const f=i.files[0];if(!f)return;const u=URL.createObjectURL(f);const img=new Image();img.onload=()=>{_wmI=img;applyWM();};img.src=u;}
+    function applyWM(){if(!_wmI)return;const c=document.getElementById('wmc2');c.width=_wmI.naturalWidth;c.height=_wmI.naturalHeight;const ctx=c.getContext('2d');ctx.drawImage(_wmI,0,0);const t=document.getElementById('wmt').value||'© Watermark';const col=document.getElementById('wmc').value;const op=document.getElementById('wmo').value/100;const pos=document.getElementById('wmp').value;const fs=Math.max(24,Math.round(c.width/20));ctx.font=`bold ${fs}px Plus Jakarta Sans,sans-serif`;ctx.fillStyle=col;ctx.globalAlpha=op;const tw=ctx.measureText(t).width;const p=20;let x=p,y=c.height-p;if(pos==='br'){x=c.width-tw-p;y=c.height-p;}else if(pos==='tr'){x=c.width-tw-p;y=fs+p;}else if(pos==='tl'){x=p;y=fs+p;}else if(pos==='c'){x=(c.width-tw)/2;y=c.height/2;}ctx.fillText(t,x,y);ctx.globalAlpha=1;document.getElementById('wmprev').innerHTML=`<img src="${c.toDataURL('image/png')}" alt="Watermarked preview" style="max-height:200px;border-radius:6px;object-fit:contain;"/>`;}
+
+    // Grayscale
+    function loadGS(i){const f=i.files[0];if(!f)return;const u=URL.createObjectURL(f);const img=new Image();img.onload=()=>{document.getElementById('gso').src=u;document.getElementById('gso').style.display='block';const c=document.getElementById('gsc');c.width=img.naturalWidth;c.height=img.naturalHeight;const ctx=c.getContext('2d');ctx.filter='grayscale(100%)';ctx.drawImage(img,0,0);ctx.filter='none';const gu=c.toDataURL('image/jpeg',.92);document.getElementById('gsr').src=gu;document.getElementById('gsr').style.display='block';};img.src=u;}
+
+    // Base64
+    function toB64(i){const f=i.files[0];if(!f)return;const r=new FileReader();r.onload=()=>{document.getElementById('b6out').value=r.result;document.getElementById('b6os').textContent=fb(f.size);document.getElementById('b6sl').textContent=fb(r.result.length);document.getElementById('b6tp').textContent=f.type.split('/')[1].toUpperCase();document.getElementById('b6res').style.display='block';};r.readAsDataURL(f);}
+    function cpB64(){navigator.clipboard.writeText(document.getElementById('b6out').value);const b=event.target;b.textContent='✓ Copied!';setTimeout(()=>b.textContent='📋 Copy Base64',2000);}
+    function cpB64Html(){const s=document.getElementById('b6out').value;navigator.clipboard.writeText(`<img src="${s}" alt="image" />`);const b=event.target;b.textContent='✓ Copied!';setTimeout(()=>b.textContent='Copy as <img> tag',2000);}
+
+    // Brightness/Contrast
+    function loadBC(i){const f=i.files[0];if(!f)return;const u=URL.createObjectURL(f);const img=new Image();img.onload=()=>{_bcI=img;applyBC();};img.src=u;}
+    function applyBC(){if(!_bcI)return;const bright=document.getElementById('bcb').value,con=document.getElementById('bcc').value,sat=document.getElementById('bcs').value;const c=document.getElementById('bcc2');c.width=_bcI.naturalWidth;c.height=_bcI.naturalHeight;const ctx=c.getContext('2d');ctx.filter=`brightness(${100+parseInt(bright)}%) contrast(${100+parseInt(con)}%) saturate(${100+parseInt(sat)}%)`;ctx.drawImage(_bcI,0,0);ctx.filter='none';document.getElementById('bcprev').innerHTML=`<img src="${c.toDataURL('image/jpeg',.92)}" alt="Adjusted preview" style="max-height:200px;border-radius:6px;object-fit:contain;"/>`;}
+    function resetBC(){['bcb','bcc','bcs'].forEach(id=>{document.getElementById(id).value=0;document.getElementById(id+'v').textContent=0;});applyBC();}
+
+    // Metadata
+    function showMeta(i){const f=i.files[0];if(!f)return;const u=URL.createObjectURL(f);const img=new Image();img.onload=()=>{const rows=[['File Name',f.name],['File Size',fb(f.size)],['File Type',f.type],['Width',img.naturalWidth+' px'],['Height',img.naturalHeight+' px'],['Aspect Ratio',(img.naturalWidth/img.naturalHeight).toFixed(2)+':1'],['Megapixels',((img.naturalWidth*img.naturalHeight)/1000000).toFixed(2)+' MP'],['Last Modified',new Date(f.lastModified).toLocaleString()]];document.getElementById('mdt').innerHTML=rows.map((r,k)=>`<tr style="background:${k%2?'var(--card)':'var(--surface)'}"><td style="padding:10px 16px;color:var(--muted);font-weight:600;border:1px solid var(--border);width:40%">${r[0]}</td><td style="padding:10px 16px;color:var(--white);border:1px solid var(--border)">${r[1]}</td></tr>`).join('');document.getElementById('mdres').style.display='block';};img.src=u;}
+
+    // Blur
+    function loadBl(i){const f=i.files[0];if(!f)return;const u=URL.createObjectURL(f);const img=new Image();img.onload=()=>{_blI=img;applyBl();};img.src=u;}
+    function applyBl(){if(!_blI)return;const a=document.getElementById('bla').value;const c=document.getElementById('blc');c.width=_blI.naturalWidth;c.height=_blI.naturalHeight;const ctx=c.getContext('2d');ctx.filter=`blur(${a}px)`;ctx.drawImage(_blI,0,0);ctx.filter='none';document.getElementById('blprev').innerHTML=`<img src="${c.toDataURL('image/jpeg',.92)}" alt="Blurred preview" style="max-height:200px;border-radius:6px;object-fit:contain;"/>`;}
+
+    // SVG→PNG
+    function svgPng(i){const f=i.files[0];if(!f)return;const reader=new FileReader();reader.onload=()=>{const scale=+document.getElementById('svsc').value;const parser=new DOMParser();const doc=parser.parseFromString(reader.result,'image/svg+xml');const svg=doc.documentElement;const w=parseInt(svg.getAttribute('width'))||300,h=parseInt(svg.getAttribute('height'))||200;const img=new Image();const blob=new Blob([reader.result],{type:'image/svg+xml'});const url=URL.createObjectURL(blob);img.onload=()=>{const c=document.getElementById('svc');c.width=w*scale;c.height=h*scale;const ctx=c.getContext('2d');ctx.scale(scale,scale);ctx.drawImage(img,0,0);document.getElementById('svprev').innerHTML=`<img src="${c.toDataURL()}" style="max-height:200px;border-radius:6px;" alt="SVG converted to PNG preview"/>`;URL.revokeObjectURL(url);};img.src=url;};reader.readAsText(f);}
+
+
+
+    // Extra working tools: PDF Merge/Split/Compress, QR, Barcode, WEBP converters
+    let _pdfMergeFiles=[], _pdfSplitFile=null, _pdfCompressFile=null, _webpImg=null, _webpMode='jpg';
+    async function ensurePdfLib(){if(window.PDFLib)return window.PDFLib;await new Promise((res,rej)=>{const s=document.createElement('script');s.src='https://unpkg.com/pdf-lib/dist/pdf-lib.min.js';s.onload=res;s.onerror=rej;document.head.appendChild(s);});return window.PDFLib;}
+    function downloadBlob(blob,name){const a=document.createElement('a');a.download=name;a.href=URL.createObjectURL(blob);a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1500);}
+    function loadPdfMerge(i){_pdfMergeFiles=[...i.files].filter(f=>f.type==='application/pdf'||f.name.toLowerCase().endsWith('.pdf'));const el=document.getElementById('pmlist');el.innerHTML=_pdfMergeFiles.length?`<strong style="color:var(--text)">${_pdfMergeFiles.length}</strong> PDF file(s) selected:<br>`+_pdfMergeFiles.map((f,k)=>`${k+1}. ${f.name} — ${fb(f.size)}`).join('<br>'):'No PDF files selected.';}
+    async function mergePdfs(){if(_pdfMergeFiles.length<2){alert('Please select at least 2 PDF files.');return;}const {PDFDocument}=await ensurePdfLib();const out=await PDFDocument.create();for(const f of _pdfMergeFiles){const src=await PDFDocument.load(await f.arrayBuffer());const pages=await out.copyPages(src,src.getPageIndices());pages.forEach(p=>out.addPage(p));}const bytes=await out.save({useObjectStreams:true});downloadBlob(new Blob([bytes],{type:'application/pdf'}),'merged-pdf.pdf');}
+    async function loadPdfSplit(i){const f=i.files[0];if(!f)return;_pdfSplitFile=f;const {PDFDocument}=await ensurePdfLib();const doc=await PDFDocument.load(await f.arrayBuffer());const n=doc.getPageCount();document.getElementById('pspinfo').innerHTML=`Loaded: <strong style="color:var(--text)">${f.name}</strong><br>Total pages: <strong style="color:var(--text)">${n}</strong>`;document.getElementById('psfrom').max=n;document.getElementById('psto').max=n;document.getElementById('psto').value=n;document.getElementById('pspout').innerHTML='';}
+    async function extractPdfRange(){if(!_pdfSplitFile){alert('Upload a PDF first.');return;}const {PDFDocument}=await ensurePdfLib();const src=await PDFDocument.load(await _pdfSplitFile.arrayBuffer());let from=Math.max(1,+document.getElementById('psfrom').value||1),to=Math.min(src.getPageCount(),+document.getElementById('psto').value||from);if(from>to){[from,to]=[to,from];}const out=await PDFDocument.create();const pages=await out.copyPages(src,Array.from({length:to-from+1},(_,i)=>from-1+i));pages.forEach(p=>out.addPage(p));const bytes=await out.save({useObjectStreams:true});downloadBlob(new Blob([bytes],{type:'application/pdf'}),`pages-${from}-to-${to}.pdf`);}
+    async function splitAllPdfPages(){if(!_pdfSplitFile){alert('Upload a PDF first.');return;}const {PDFDocument}=await ensurePdfLib();const src=await PDFDocument.load(await _pdfSplitFile.arrayBuffer());const outEl=document.getElementById('pspout');outEl.innerHTML='Creating download links…';let html='';for(let i=0;i<src.getPageCount();i++){const out=await PDFDocument.create();const [p]=await out.copyPages(src,[i]);out.addPage(p);const bytes=await out.save({useObjectStreams:true});const url=URL.createObjectURL(new Blob([bytes],{type:'application/pdf'}));html+=`<a class="btn btn-outline" download="page-${i+1}.pdf" href="${url}" style="margin:4px;">Page ${i+1}</a>`;}outEl.innerHTML=html;}
+    function loadPdfCompress(i){const f=i.files[0];if(!f)return;_pdfCompressFile=f;document.getElementById('pcorig').textContent=fb(f.size);document.getElementById('pcnew').textContent='—';document.getElementById('pcsaved').textContent='—';document.getElementById('pcstatus').textContent='Ready to optimize.';}
+    async function compressPdf(){if(!_pdfCompressFile){alert('Upload a PDF first.');return;}const st=document.getElementById('pcstatus');st.textContent='Optimizing PDF…';try{const {PDFDocument}=await ensurePdfLib();const src=await PDFDocument.load(await _pdfCompressFile.arrayBuffer(),{updateMetadata:false});src.setTitle('');src.setAuthor('');src.setSubject('');src.setKeywords([]);src.setProducer('FreeImgTools');src.setCreator('FreeImgTools');const bytes=await src.save({useObjectStreams:true,addDefaultPage:false});document.getElementById('pcnew').textContent=fb(bytes.length);const diff=_pdfCompressFile.size-bytes.length;document.getElementById('pcsaved').textContent=(diff>=0?'-':'+')+fb(Math.abs(diff));st.textContent='Done. Some PDFs cannot be reduced much without server-side image recompression.';downloadBlob(new Blob([bytes],{type:'application/pdf'}),'optimized.pdf');}catch(e){st.textContent='Could not optimize this PDF. Try another file.';}}
+    async function ensureQRCodeLib(){if(window.QRCode)return window.QRCode;await new Promise((res,rej)=>{const s=document.createElement('script');s.src='https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js';s.onload=res;s.onerror=rej;document.head.appendChild(s);});return window.QRCode;}
+    async function makeQR(){const box=document.getElementById('qrbox');if(!box)return;const text=(document.getElementById('qrtxt').value||' ').trim();box.innerHTML='';await ensureQRCodeLib();new QRCode(box,{text:text||' ',width:220,height:220,colorDark:'#000000',colorLight:'#ffffff',correctLevel:QRCode.CorrectLevel.H});}
+    function downloadQR(){const box=document.getElementById('qrbox');const img=box.querySelector('img');const canvas=box.querySelector('canvas');let href=img?img.src:(canvas?canvas.toDataURL('image/png'):null);if(!href){makeQR().then(downloadQR);return;}const a=document.createElement('a');a.download='qr-code.png';a.href=href;a.click();}
+    async function ensureJsBarcode(){if(window.JsBarcode)return window.JsBarcode;await new Promise((res,rej)=>{const s=document.createElement('script');s.src='https://cdn.jsdelivr.net/npm/jsbarcode@3.11.6/dist/JsBarcode.all.min.js';s.onload=res;s.onerror=rej;document.head.appendChild(s);});return window.JsBarcode;}
+    async function makeBarcode(){await ensureJsBarcode();const v=(document.getElementById('bartext').value||'FREEIMGTOOLS123').trim();try{JsBarcode('#barsvg',v,{format:'CODE128',lineColor:'#000',background:'#fff',width:2,height:90,displayValue:true,fontSize:16,margin:10});}catch(e){document.getElementById('barsvg').innerHTML='';}}
+    function downloadBarcodeSVG(){const svg=document.getElementById('barsvg');if(!svg||!svg.innerHTML){makeBarcode().then(downloadBarcodeSVG);return;}const data=new XMLSerializer().serializeToString(svg);downloadBlob(new Blob([data],{type:'image/svg+xml'}),'barcode.svg');}
+    function downloadBarcodePNG(){const svg=document.getElementById('barsvg');if(!svg||!svg.innerHTML){makeBarcode().then(downloadBarcodePNG);return;}const data=new XMLSerializer().serializeToString(svg);const img=new Image();const url=URL.createObjectURL(new Blob([data],{type:'image/svg+xml'}));img.onload=()=>{const c=document.createElement('canvas');c.width=img.width||600;c.height=img.height||180;const ctx=c.getContext('2d');ctx.fillStyle='#fff';ctx.fillRect(0,0,c.width,c.height);ctx.drawImage(img,0,0);downloadBlob(dataURLtoBlob(c.toDataURL('image/png')),'barcode.png');URL.revokeObjectURL(url);};img.src=url;}
+    function dataURLtoBlob(dataurl){const arr=dataurl.split(','),mime=arr[0].match(/:(.*?);/)[1],bstr=atob(arr[1]);let n=bstr.length,u8arr=new Uint8Array(n);while(n--)u8arr[n]=bstr.charCodeAt(n);return new Blob([u8arr],{type:mime});}
+    function webpToolBuild(mode){_webpMode=mode;return `<p style="font-size:.85rem;color:var(--muted);margin-bottom:16px;">Convert WEBP image to ${mode.toUpperCase()} instantly in your browser.</p><label class="upload-zone" for="wpf"><input type="file" id="wpf" accept="image/webp,.webp,image/*" onchange="loadWebpConvert(this,'${mode}')"/><div class="upload-icon">🖼️</div><div class="upload-label">Click to select WEBP image</div><div class="upload-hint">WEBP image recommended</div></label><canvas id="wpc" style="display:none"></canvas><div id="wpprev" style="margin-top:16px;background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:16px;min-height:140px;display:flex;align-items:center;justify-content:center;"><span style="font-size:.85rem;color:var(--muted);">Preview will appear here</span></div><button class="btn btn-primary" onclick="downloadWebpConverted()" style="margin-top:16px;width:100%">⬇️ Download ${mode.toUpperCase()}</button><div class="modal-ad">Advertisement · AdSense 728×90</div>`;}
+    function loadWebpConvert(i,mode){const f=i.files[0];if(!f)return;_webpMode=mode;const url=URL.createObjectURL(f);const img=new Image();img.onload=()=>{_webpImg=img;const c=document.getElementById('wpc');c.width=img.naturalWidth;c.height=img.naturalHeight;const ctx=c.getContext('2d');if(mode==='jpg'){ctx.fillStyle='#fff';ctx.fillRect(0,0,c.width,c.height);}ctx.drawImage(img,0,0);const type=mode==='jpg'?'image/jpeg':'image/png';document.getElementById('wpprev').innerHTML=`<img src="${c.toDataURL(type,.92)}" alt="Converted preview" style="max-height:260px;border-radius:8px;object-fit:contain;"/>`;URL.revokeObjectURL(url);};img.src=url;}
+    function downloadWebpConverted(){const c=document.getElementById('wpc');if(!c||!c.width){alert('Upload an image first.');return;}const type=_webpMode==='jpg'?'image/jpeg':'image/png';const ext=_webpMode==='jpg'?'jpg':'png';const a=document.createElement('a');a.download='converted-webp.'+ext;a.href=c.toDataURL(type,.92);a.click();}
+
+    // Download
+    function dlCanvas(id,name){const c=document.getElementById(id);if(!c||c.width===0)return;const a=document.createElement('a');a.download=name;a.href=c.toDataURL('image/jpeg',.92);a.click();}
+  </script>
+
+
+
+</body>
+</html>

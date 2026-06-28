@@ -1,0 +1,24 @@
+<!DOCTYPE html><html><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>Contact Us - FreeImgTools</title><style>
+    :root{--bg:#0d0d14;--surface:#13131f;--card:#18182a;--border:#252538;--accent:#6c47ff;--accent2:#a78bfa;--green:#22c55e;--orange:#f97316;--red:#ef4444;--blue:#3b82f6;--text:#e2e2f0;--muted:#6b6b8a;--white:#ffffff;--radius:14px;--font:'Plus Jakarta Sans',system-ui,sans-serif;}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;font-size:16px;}
+    body{background:var(--bg);color:var(--text);font-family:var(--font);line-height:1.6;-webkit-font-smoothing:antialiased;}
+    a{color:inherit;text-decoration:none;}
+    img{max-width:100%;display:block;}
+    button{cursor:pointer;font-family:var(--font);}
+    .container{max-width:1200px;margin:0 auto;padding:0 24px;}
+    header{position:sticky;top:0;z-index:200;background:rgba(13,13,20,.92);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);}
+    .nav{display:flex;align-items:center;gap:20px;height:64px;}
+    .logo{font-size:1.3rem;font-weight:800;letter-spacing:-.5px;display:flex;align-items:center;gap:8px;white-space:nowrap;}
+    .hero{padding:80px 0 64px;text-align:center;position:relative;overflow:hidden;}
+    .hero::before{content:'';position:absolute;top:-200px;left:50%;transform:translateX(-50%);width:800px;height:600px;background:radial-gradient(ellipse,rgba(108,71,255,.18) 0%,transparent 70%);pointer-events:none;}
+    .hero h1{font-size:clamp(2.2rem,5.5vw,4rem);font-weight:800;line-height:1.1;letter-spacing:-2px;color:var(--white);margin-bottom:20px;max-width:800px;margin-inline:auto;}
+    .hero h1 mark{background:linear-gradient(135deg,var(--accent),var(--accent2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-style:normal;}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:12px 24px;border-radius:10px;font-weight:700;font-size:.9rem;border:none;transition:all .2s;}
+    .btn-primary{background:linear-gradient(135deg,var(--accent),#8b5cf6);color:var(--white);box-shadow:0 8px 24px rgba(108,71,255,.35);}
+    .btn-outline{background:var(--card);border:1px solid var(--border);color:var(--text);}
+    .tool-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:26px;cursor:pointer;transition:all .25s;position:relative;overflow:hidden;display:flex;flex-direction:column;gap:14px;}
+    .tool-card:hover{border-color:rgba(108,71,255,.5);transform:translateY(-4px);box-shadow:0 20px 60px rgba(108,71,255,.12);}
+  
+.container{max-width:900px;margin:40px auto;padding:20px} .card{background:#13131f;padding:30px;border-radius:16px} a{color:#6cf}
+</style></head><body><div class='container'><div class='card'><h1>Contact Us</h1><p>Email: mirzaatif146@gmail.com</p><form action='https://formsubmit.co/mirzaatif146@gmail.com' method='POST'><input style='width:100%;padding:10px;margin:5px 0' name='name' placeholder='Name'><input style='width:100%;padding:10px;margin:5px 0' name='email' placeholder='Email'><textarea style='width:100%;padding:10px;height:120px' name='message' placeholder='Message'></textarea><button type='submit'>Send Message</button></form><p><a href='index.html'>← Back to Home</a></p></div></div></body></html>
